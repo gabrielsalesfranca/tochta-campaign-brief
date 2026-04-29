@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tochta — Social Campaign Brief</title>
+<title>Tochta — Full Campaign & Strategy Brief</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -14,18 +14,23 @@
   --green:#3BB54A;--green-light:#E8F8EB;--green-dark:#1E7A2C;
   --cream:#F8F5EF;--warm-white:#FDFBF8;--gold:#C9A255;
   --text:#0E1B2C;--text-mid:#3D5068;--text-muted:#7A8FA8;
-  --border:rgba(22,34,53,0.1);--border-mid:rgba(22,34,53,0.18);
-  --serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif
+  --border:rgba(22,34,53,0.1);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--warm-white);color:var(--text);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--warm-white);color:var(--text);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* NAV */
 nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid rgba(255,255,255,0.07)}
-.nav-brand{font-family:var(--serif);font-size:17px;color:#fff;letter-spacing:0.02em}
+.nav-brand{font-family:var(--serif);font-size:17px;color:#fff;letter-spacing:0.02em;white-space:nowrap}
 .nav-brand span{color:var(--green)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy-light);text-decoration:none;transition:color 0.2s}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy-light);text-decoration:none;transition:color 0.2s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
-.nav-badge{font-size:11px;font-weight:500;background:rgba(59,181,74,0.15);color:#6FD97D;padding:4px 12px;border-radius:20px;border:1px solid rgba(59,181,74,0.25)}
+.nav-badge{font-size:11px;font-weight:500;background:rgba(59,181,74,0.15);color:#6FD97D;padding:4px 12px;border-radius:20px;border:1px solid rgba(59,181,74,0.25);white-space:nowrap}
+
+/* HERO */
 .hero{background:var(--navy);padding:5rem 3rem 4.5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.12) 0%,transparent 65%);pointer-events:none}
 .hero-inner{max-width:860px;position:relative}
@@ -33,51 +38,130 @@ nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 3rem;disp
 .hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--green)}
 .hero h1{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1.18;margin-bottom:1.25rem}
 .hero h1 em{color:var(--gold);font-style:italic}
-.hero-sub{font-size:16px;color:var(--navy-light);max-width:580px;line-height:1.7;margin-bottom:2.5rem}
+.hero-sub{font-size:16px;color:var(--navy-light);max-width:640px;line-height:1.75;margin-bottom:2.5rem}
 .hero-meta{display:flex;gap:2.5rem;flex-wrap:wrap}
-.hero-meta-item{display:flex;flex-direction:column;gap:3px}
+.hmi{display:flex;flex-direction:column;gap:3px}
 .hml{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted)}
 .hmv{font-size:13px;color:var(--navy-light)}
+
+/* TOC */
+.toc-section{background:var(--cream);border-bottom:1px solid var(--border);padding:2rem 3rem}
+.toc-inner{max-width:980px;margin:0 auto}
+.toc-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem}
+.toc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.toc-item{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 12px;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+.toc-item:hover{border-color:var(--navy-mid);background:var(--navy-pale)}
+.toc-num{font-size:10px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px}
+.toc-name{font-size:12px;font-weight:500;color:var(--text);line-height:1.3}
+
+/* LAYOUT */
 .pi{max-width:980px;margin:0 auto;padding:0 3rem}
-.sw{padding:4rem 0 2rem}
+.sw{padding:4.5rem 0 2rem}
 .sey{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
-.st{font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--text);line-height:1.25;margin-bottom:0.5rem}
-.sd{font-size:14px;color:var(--text-mid);max-width:600px;line-height:1.65}
-.sr{height:1px;background:var(--border);margin:1.5rem 0 2rem}
-.big-insight{background:var(--navy);border-radius:12px;padding:2rem 2.25rem;margin-bottom:2rem;position:relative;overflow:hidden}
-.bi-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:1rem}
-.bi-quote{font-family:var(--serif);font-size:1.4rem;color:#fff;line-height:1.4;font-style:italic;max-width:680px}
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:2rem}
-.sg3{grid-template-columns:1fr 1fr 1fr}
-.sc{background:var(--warm-white);padding:1.5rem 1.75rem}
-.sc.ac{background:var(--navy)}
-.sc.ac .cl{color:var(--navy-light)}
-.sc.ac .ct{color:#fff}
-.cl{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
-.ct{font-size:14px;line-height:1.65;color:var(--text)}
-.dg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2rem}
-.dc{border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;background:var(--warm-white);position:relative;overflow:hidden}
-.dc::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
-.dc.d1::before{background:var(--blue)}
-.dc.d2::before{background:var(--green)}
-.dc.d3::before{background:var(--gold)}
-.dc.d4::before{background:#7F77DD}
-.dn{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
-.dtitle{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.3}
-.dbody{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:10px}
-.dproof{font-size:12px;color:var(--text-muted);padding:8px 12px;background:var(--cream);border-radius:6px;line-height:1.55}
-.dproof strong{color:var(--text-mid);font-weight:500}
-.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:3rem}
-.pc{border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;background:var(--warm-white)}
-.pi2{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;margin-bottom:10px}
-.pn{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px;line-height:1.3}
-.pd{font-size:12px;color:var(--text-muted);line-height:1.5;margin-bottom:8px}
-.pp{font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;display:inline-block}
-.cc{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:2rem;background:var(--warm-white)}
+.st{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:0.75rem}
+.sd{font-size:15px;color:var(--text-mid);max-width:700px;line-height:1.75}
+.sr{height:1px;background:var(--border);margin:2rem 0}
+.df{height:1px;background:var(--border);margin:4rem 0}
+
+/* PROSE BLOCKS */
+.prose{font-size:15px;color:var(--text-mid);line-height:1.8;max-width:760px}
+.prose p{margin-bottom:1.1rem}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500}
+
+/* PULL QUOTE */
+.pq{border-left:3px solid var(--blue);padding:1rem 1.5rem;margin:2rem 0;background:var(--blue-light);border-radius:0 8px 8px 0}
+.pq-text{font-family:var(--serif);font-size:1.15rem;color:var(--navy);line-height:1.5;font-style:italic}
+
+/* BIG STAT ROW */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:2rem 0}
+.stat-card{background:var(--navy);border-radius:10px;padding:1.25rem 1.5rem}
+.stat-num{font-family:var(--serif);font-size:1.8rem;color:#fff;line-height:1;margin-bottom:6px}
+.stat-label{font-size:12px;color:var(--navy-light);line-height:1.4}
+
+/* INFO GRID */
+.ig2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0}
+.ig3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:1.5rem 0}
+.ic{background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;border:1px solid var(--border)}
+.ic.dark{background:var(--navy);border-color:transparent}
+.ic-label{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.ic.dark .ic-label{color:var(--navy-light)}
+.ic-text{font-size:13px;color:var(--text-mid);line-height:1.65}
+.ic.dark .ic-text{color:#d4e0f0}
+
+/* INSIGHT BOX */
+.insight{background:var(--navy);border-radius:12px;padding:2rem 2.25rem;margin:2rem 0;position:relative;overflow:hidden}
+.insight::after{content:'"';font-family:var(--serif);font-size:160px;color:rgba(255,255,255,0.03);position:absolute;right:1rem;top:-1rem;line-height:1;pointer-events:none}
+.insight-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:1rem}
+.insight-quote{font-family:var(--serif);font-size:1.35rem;color:#fff;line-height:1.45;font-style:italic;max-width:700px}
+.insight-sub{font-size:13px;color:var(--navy-light);margin-top:1rem;line-height:1.6;max-width:620px}
+
+/* HIGHLIGHT BOX */
+.hbox{border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;background:#fff}
+.hbox-label{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
+.hbox-text{font-size:14px;color:var(--text-mid);line-height:1.7}
+
+/* PERSONA CARDS */
+.persona-full{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:2rem;background:#fff}
+.persona-top{padding:1.5rem 1.75rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.25rem;align-items:flex-start;border-bottom:1px solid var(--border)}
+.persona-icon-lg{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;flex-shrink:0}
+.persona-title{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--text);margin-bottom:4px}
+.persona-sub{font-size:13px;color:var(--text-muted)}
+.persona-body{padding:1.5rem 1.75rem}
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.pg3{grid-template-columns:1fr 1fr 1fr}
+.pc2{background:var(--cream);border-radius:8px;padding:12px 14px}
+.pc2-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:5px}
+.pc2-text{font-size:13px;color:var(--text-mid);line-height:1.6}
+.trigger-box{background:var(--navy);border-radius:8px;padding:12px 16px;margin-top:10px}
+.trigger-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--green);margin-bottom:5px}
+.trigger-quote{font-family:var(--serif);font-size:1rem;color:#fff;font-style:italic;line-height:1.4}
+
+/* PRODUCT CARDS */
+.product-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1.5rem;background:#fff}
+.product-header{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.product-name{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--text);margin-bottom:3px}
+.product-tagline{font-size:12px;color:var(--text-muted)}
+.product-body{padding:1.25rem 1.5rem}
+.layer-list{list-style:none;margin:10px 0}
+.layer-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-mid);line-height:1.55}
+.layer-item:last-child{border-bottom:none}
+.layer-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;flex-shrink:0;background:var(--navy-pale);color:var(--navy-mid)}
+
+/* EMOTIONAL DELIVERABLES */
+.ed-card{border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;background:#fff;position:relative;overflow:hidden;margin-bottom:12px}
+.ed-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%}
+.ed-card.e1::before{background:var(--blue)}
+.ed-card.e2::before{background:var(--green)}
+.ed-card.e3::before{background:var(--gold)}
+.ed-card.e4::before{background:#7F77DD}
+.ed-num{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px}
+.ed-title{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--text);margin-bottom:10px;line-height:1.3}
+.ed-body{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:12px}
+.ed-proof{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ed-proof-cell{background:var(--cream);border-radius:6px;padding:8px 12px}
+.ed-proof-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:3px}
+.ed-proof-text{font-size:12px;color:var(--text-mid);line-height:1.55}
+
+/* MESSAGE LADDER */
+.ladder{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:1.5rem 0}
+.lrung{background:#fff;padding:1.5rem 1.75rem}
+.lrung.dark{background:var(--navy)}
+.lr-num{font-size:28px;font-weight:300;color:var(--border);margin-bottom:8px;line-height:1;font-family:var(--serif)}
+.lrung.dark .lr-num{color:rgba(255,255,255,0.1)}
+.lr-label{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.lrung.dark .lr-label{color:var(--navy-light)}
+.lr-text{font-size:13px;color:var(--text-mid);line-height:1.65}
+.lrung.dark .lr-text{color:#d4e0f0}
+.lr-example{font-size:12px;font-style:italic;color:var(--navy-mid);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.lrung.dark .lr-example{color:var(--navy-light);border-top-color:rgba(255,255,255,0.08)}
+
+/* CAROUSEL CARDS */
+.cc{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:2rem;background:#fff}
 .ch{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
 .cnum{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
 .cname{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--text);line-height:1.3}
-.cb{padding:1.5rem 1.75rem}
+.cbody{padding:1.5rem 1.75rem}
 .ds{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1.5rem}
 .dcell{background:var(--cream);border-radius:8px;padding:12px 14px}
 .dlbl{font-size:10px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:5px}
@@ -85,7 +169,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 3rem;disp
 .sl{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}
 .srow{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
 .srow:last-of-type{border-bottom:none}
-.sn{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;margin-top:2px}
+.snum{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;margin-top:2px}
 .srole{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted);margin-bottom:4px}
 .shd{font-family:var(--serif);font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:5px}
 .scopy{font-size:12px;color:var(--text-mid);line-height:1.55;margin-bottom:6px}
@@ -95,11 +179,13 @@ nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 3rem;disp
 .capl{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
 .capt{font-size:13px;color:var(--text-mid);line-height:1.7;white-space:pre-line}
 .htags{font-size:11px;color:var(--blue);margin-top:8px;line-height:1.8}
-.ac2{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1.5rem;background:var(--warm-white)}
-.ah{padding:1.25rem 1.75rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+
+/* AD CARDS */
+.acard{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1.5rem;background:#fff}
+.ahead{padding:1.25rem 1.75rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
 .anl{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
 .atitle{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--text)}
-.ab{padding:1.25rem 1.75rem}
+.abody{padding:1.25rem 1.75rem}
 .aig{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
 .aic{background:var(--cream);border-radius:8px;padding:10px 12px}
 .ail{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:4px}
@@ -109,28 +195,37 @@ nav{position:sticky;top:0;z-index:100;background:var(--navy);padding:0 3rem;disp
 .vdt{font-size:13px;color:#d4e0f0;line-height:1.6}
 .cpb{border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;margin-bottom:10px}
 .cpr{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted);margin-bottom:4px}
-.cph{font-family:var(--serif);font-size:1.15rem;color:var(--text);line-height:1.4;margin-bottom:6px}
+.cph{font-family:var(--serif);font-size:1.1rem;color:var(--text);line-height:1.4;margin-bottom:6px}
 .cps{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:6px}
 .cpc{font-size:12px;font-weight:500;color:var(--navy-mid)}
 .vrl{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
 .vrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.vcard{background:var(--cream);border-radius:8px;padding:10px 14px}
+.vc{background:var(--cream);border-radius:8px;padding:10px 14px}
 .vcl{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:5px}
 .vch{font-family:var(--serif);font-size:13px;color:var(--text);line-height:1.4;margin-bottom:4px}
 .vcs{font-size:11px;color:var(--text-muted);line-height:1.5}
+
+/* UTILS */
 .pill{display:inline-block;font-size:11px;font-weight:500;padding:3px 12px;border-radius:20px}
-.df{height:1px;background:var(--border);margin:3rem 0}
+.mt1{margin-top:1rem}
+.mt2{margin-top:2rem}
+.warning-box{background:#FFF8E6;border:1px solid #F0C040;border-radius:8px;padding:12px 16px;margin:1.5rem 0}
+.warning-label{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:#854F0B;margin-bottom:5px}
+.warning-text{font-size:13px;color:#633806;line-height:1.6}
+
+/* FOOTER */
 footer{background:var(--navy);padding:2.5rem 3rem;margin-top:5rem}
 .fi{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .fb{font-family:var(--serif);font-size:16px;color:#fff}
 .fb span{color:var(--green)}
 .fm{font-size:12px;color:var(--text-muted)}
-@media(max-width:700px){
+
+@media(max-width:720px){
   nav{padding:0 1.25rem}
   .nav-links{display:none}
-  .hero{padding:3rem 1.25rem}
-  .pi{padding:0 1.25rem}
-  .sg,.sg3,.dg,.pr,.ds,.aig,.vrow{grid-template-columns:1fr}
+  .hero,.pi,.toc-section{padding-left:1.25rem;padding-right:1.25rem}
+  .toc-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-row,.ig2,.ig3,.persona-grid,.pg3,.ladder,.ds,.aig,.vrow,.ed-proof{grid-template-columns:1fr}
   footer{padding:2rem 1.25rem}
   .fi{flex-direction:column;gap:8px;align-items:flex-start}
 }
@@ -138,131 +233,455 @@ footer{background:var(--navy);padding:2.5rem 3rem;margin-top:5rem}
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <span class="nav-brand">Tochta <span>&middot;</span> Campaign Brief</span>
+  <span class="nav-brand">Tochta <span>&middot;</span> Strategy &amp; Campaign Brief</span>
   <ul class="nav-links">
-    <li><a href="#strategy">Strategy</a></li>
-    <li><a href="#deliverables">Deliverables</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#product">Product</a></li>
+    <li><a href="#personas">Personas</a></li>
+    <li><a href="#emotional">Emotional Strategy</a></li>
     <li><a href="#carousels">Carousels</a></li>
     <li><a href="#ads">Single Ads</a></li>
   </ul>
   <span class="nav-badge">April 2026</span>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Instagram Social Campaign</div>
-    <h1>Emotional Positioning<br>&amp; <em>Content Strategy</em></h1>
-    <p class="hero-sub">A complete campaign brief covering strategic foundation, persona pain points, emotional deliverables, 3 carousel concepts, and 6 single-graphic ad briefs — with copy, visual direction, and A/B variants.</p>
+    <div class="hero-eyebrow">Full Strategy &amp; Campaign Brief</div>
+    <h1>Understanding Tochta,<br>their customer, and<br><em>why this campaign works</em></h1>
+    <p class="hero-sub">Before a single piece of content is created, every team member needs to understand the world this brand lives in — the market, the product, the people, and the emotional reality of the customer. This document builds that foundation, then connects it directly to the campaign work. Read it from beginning to end before touching any content.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item"><span class="hml">Brand</span><span class="hmv">Tochta Mattress</span></div>
-      <div class="hero-meta-item"><span class="hml">Prepared by</span><span class="hmv">Nomolos Creative</span></div>
-      <div class="hero-meta-item"><span class="hml">Channels</span><span class="hmv">Instagram Feed — Carousels &amp; Single Graphics</span></div>
-      <div class="hero-meta-item"><span class="hml">Personas</span><span class="hmv">Weekend Wanderer · Full-Timer · Trucker · Custom Sleeper</span></div>
+      <div class="hmi"><span class="hml">Brand</span><span class="hmv">Tochta Mattress</span></div>
+      <div class="hmi"><span class="hml">Prepared by</span><span class="hmv">Nomolos Creative</span></div>
+      <div class="hmi"><span class="hml">Date</span><span class="hmv">April 2026</span></div>
+      <div class="hmi"><span class="hml">Channel focus</span><span class="hmv">Instagram — Carousels &amp; Single Graphics</span></div>
     </div>
   </div>
 </section>
 
-<!-- STRATEGY -->
-<section id="strategy">
+<!-- TOC -->
+<div class="toc-section">
+  <div class="toc-inner">
+    <p class="toc-label">Document sections</p>
+    <div class="toc-grid">
+      <a href="#market" class="toc-item"><p class="toc-num">01</p><p class="toc-name">The Market Reality</p></a>
+      <a href="#product" class="toc-item"><p class="toc-num">02</p><p class="toc-name">The Product</p></a>
+      <a href="#personas" class="toc-item"><p class="toc-num">03</p><p class="toc-name">Customer Personas &amp; Pain Points</p></a>
+      <a href="#emotional" class="toc-item"><p class="toc-num">04</p><p class="toc-name">Emotional Strategy</p></a>
+      <a href="#carousels" class="toc-item"><p class="toc-num">05</p><p class="toc-name">Carousel Campaigns</p></a>
+      <a href="#ads" class="toc-item"><p class="toc-num">06</p><p class="toc-name">Single Graphic Ads</p></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 01 — MARKET -->
+<!-- ============================================================ -->
+<section id="market">
 <div class="pi"><div class="sw">
-  <p class="sey">Part 01 — Foundation</p>
-  <h2 class="st">The strategic core</h2>
-  <p class="sd">Before any copy or creative direction, these are the strategic truths that govern every decision in this campaign.</p>
+  <p class="sey">Section 01</p>
+  <h2 class="st">The market reality</h2>
+  <p class="sd">To communicate effectively for Tochta, you need to understand the world the customer lives in — the RV lifestyle, the industry, and why this specific moment in time is an exceptional opportunity.</p>
   <div class="sr"></div>
-  <div class="big-insight">
-    <p class="bi-label">The core insight</p>
-    <p class="bi-quote">"RV owners don't buy a mattress. They buy back the trip they already paid for."</p>
+
+  <div class="prose">
+    <p>The recreational vehicle market in the United States is not a niche hobby. It is a mainstream lifestyle that spans generations, income levels, and motivations. As of 2024, <strong>11.2 million American households own an RV</strong> — and nearly 17 million more express interest in owning one within five years. One in four leisure trips taken in the US today is a camping trip. RV camping reached nearly 10 million households in 2024, with total camping expenditures hitting $61 billion that year.</p>
+    <p>This is the world Tochta operates in. A massive, engaged, lifestyle-driven community of people who have made a significant financial and emotional investment in a way of living that centers on freedom, the outdoors, and time with family. They are not casual consumers. They are deeply committed to this lifestyle — and they upgrade, customize, and invest in their rigs constantly.</p>
+    <p>But here is the critical context that makes right now the most important moment for this brand: <strong>RV sales hit a historic record of over 600,000 units in 2021</strong>, driven by the pandemic travel boom. Millions of Americans who had never owned an RV before bought one. They were first-time buyers, many of them younger than the typical RV demographic, excited about road travel and outdoor living. They bought their rigs. They hit the road. And they have been sleeping on the factory mattress that came with it ever since.</p>
+    <p>That was three to five years ago. Factory RV mattresses are built from the cheapest possible foam — manufacturers spend as little as $80 on the mattress for a $60,000 to $100,000+ vehicle. That foam degrades quickly. Within one to two years, the support structure begins to fail. By year three or four, the sleeper is effectively lying on compressed foam with minimal support. <strong>Millions of those 2021 buyers are right now living with a mattress that is failing underneath them</strong> — and many of them haven't connected the dots between their morning back pain and the thing they're sleeping on.</p>
+    <p>This is the replacement wave. It is open right now. Tochta's job — and our job in creating this content — is to be the clear, credible, emotionally resonant answer the moment those buyers start searching for a solution.</p>
   </div>
-  <div class="sg">
-    <div class="sc ac"><p class="cl">The real product</p><p class="ct">The product is not a mattress — it is the completion of a dream the customer already committed to. The RV cost $80,000. The trip took six months of planning. The factory mattress cost $80 to produce. That gap is the emotional engine of every sale.</p></div>
-    <div class="sc"><p class="cl">Why now</p><p class="ct">RV sales hit 600,000 units in 2021. Those buyers have now lived with their factory mattresses for 3–5 years. The foam is degrading. The pain is accumulating. The replacement wave is open right now — Tochta needs to own it.</p></div>
-    <div class="sc"><p class="cl">The sleep-joy connection</p><p class="ct">Research is explicit: poor sleep quality reduces the intensity of positive emotions. The sunrise matters less. The destination lands with less impact. Bad sleep doesn't just make you tired — it steals the feeling of the places you came all this way to see.</p></div>
-    <div class="sc ac"><p class="cl">The message sequence — non-negotiable</p><p class="ct">Lead with emotion → bridge with empathy → close with proof. Lead with rational and you lose them. The specs are the proof you bring after you've earned their attention — never the hook.</p></div>
+
+  <div class="stat-row">
+    <div class="stat-card"><p class="stat-num">11.2M</p><p class="stat-label">US households that own an RV as of 2024</p></div>
+    <div class="stat-card"><p class="stat-num">600K</p><p class="stat-label">RV units sold at the 2021 peak — now entering mattress replacement age</p></div>
+    <div class="stat-card"><p class="stat-num">$61B</p><p class="stat-label">Total US camping expenditure in 2024 — a highly engaged spending market</p></div>
+    <div class="stat-card"><p class="stat-num">~$80</p><p class="stat-label">What RV manufacturers typically spend on the factory mattress in a six-figure rig</p></div>
   </div>
-  <div class="sg sg3">
-    <div class="sc"><p class="cl">Hook layer</p><p class="ct">Emotional. 3–6 words. Speaks to the felt pain. No product, no features. Pure recognition.<br><br><em style="color:var(--navy-mid)">"You didn't come this far to sleep this bad."</em></p></div>
-    <div class="sc"><p class="cl">Empathy bridge</p><p class="ct">Validates + reframes. 1–2 sentences. Names the real problem and positions Tochta as someone who understands because they lived it.<br><br><em style="color:var(--navy-mid)">"Factory RV mattresses are built to a price point. We know — we used to sleep on them too."</em></p></div>
-    <div class="sc"><p class="cl">Rational proof</p><p class="ct">3–5 facts that earn the trust the emotional hook created. Factory, certifications, custom builder, trial, warranty.<br><br><em style="color:var(--navy-mid)">"Built in our SC factory. Any size, any shape. 100-night trial. 10-year warranty."</em></p></div>
+
+  <div class="prose mt2">
+    <p>Beyond the replacement wave, there are several other market trends that directly benefit Tochta's positioning right now.</p>
+    <p><strong>The quality-over-quantity shift.</strong> Recent travel research shows that nearly two-thirds of RV travelers are planning fewer trips, but more meaningful, higher-quality ones. They are spending more per experience — not less. They are thinking harder about every element of their trip, from the destination to the gear. A premium mattress fits perfectly into this mindset shift. This is not the moment to lead with price. This is the moment to lead with quality, comfort, and the idea that the trip they've invested in deserves to be fully experienced.</p>
+    <p><strong>Sleep health has become a cultural conversation.</strong> In a way it never was five years ago, consumers are now aware that sleep quality affects everything — mood, performance, physical health, emotional wellbeing, and the ability to enjoy life. The wellness industry has done much of the education work here. People now understand that poor sleep isn't just tiredness. Science confirms that poor sleep quality specifically reduces the intensity of positive emotions — the joy, the awe, the connection. The sunrise means less when you're exhausted. The hike feels worse. Tochta's product is now sitting at the intersection of the wellness conversation and the RV lifestyle, and both audiences are ready to hear this message.</p>
+    <p><strong>The van life and digital nomad movement.</strong> A growing segment of the market — younger, remote-working, highly social-media active — has adopted van life and full-time RV living as a primary lifestyle. These buyers have non-standard sleeping spaces by definition, they document their lives online, and they are deeply community-driven. Tochta's custom sizing capability is uniquely suited to serve them, and their social media presence makes them natural UGC amplifiers.</p>
+  </div>
+
+  <div class="hbox mt2">
+    <p class="hbox-label">The competitive landscape in one paragraph</p>
+    <p class="hbox-text">Tochta competes in two arenas simultaneously. The first is the broad DTC mattress space — brands like Casper, Purple, Helix, and Saatva — which have large marketing budgets and brand recognition but <strong>cannot serve custom sizes or shapes</strong>. The second is the specialist RV/custom mattress space, where Wilderness RV Mattress is the primary threat. Wilderness is well-resourced, growing fast, and offers a hybrid/coil option that Tochta currently lacks. But Wilderness has no equivalent to the Divini's dual-zone firmness technology — that is Tochta's single most defensible competitive advantage. No other brand in this niche offers independent per-side firmness control. Combined with 25+ years of real factory ownership and a custom builder that generates instant quotes for any shape, Tochta holds a position in the market that no competitor can fully replicate.</p>
   </div>
 </div></div>
 </section>
 
-<!-- DELIVERABLES -->
-<section id="deliverables">
+<div class="pi"><div class="df"></div></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 02 — PRODUCT -->
+<!-- ============================================================ -->
+<section id="product">
 <div class="pi"><div class="sw">
-  <p class="sey">Part 02 — Emotional Framework</p>
-  <h2 class="st">What Tochta actually sells</h2>
-  <p class="sd">Four emotional deliverables — in priority order. Every piece of content maps back to one of these.</p>
+  <p class="sey">Section 02</p>
+  <h2 class="st">The product — what Tochta actually makes and why it matters</h2>
+  <p class="sd">You cannot communicate this product well if you don't understand what it is, how it's made, and what problem each layer solves. This is not a mattress company with a clever brand. It is a real factory making a genuinely superior product. That difference must come through in every piece of content.</p>
   <div class="sr"></div>
-  <div class="dg">
-    <div class="dc d1">
-      <p class="dn">Deliverable 01</p>
-      <h3 class="dtitle">The completion of the dream</h3>
-      <p class="dbody">RV ownership is an aspirational act — freedom, family, adventure, escape. The mattress is the last broken piece of that dream. Tochta completes the investment they already made.</p>
-      <p class="dproof"><strong>Emotional proof:</strong> "You didn't spend that much on your rig to wake up sore every morning." <strong>Rational proof:</strong> 25-year factory, CertiPUR-US, 10-year warranty.</p>
+
+  <div class="prose">
+    <p>Tochta was founded by mattress factory owners who were also passionate RV travelers. They experienced firsthand the poor quality of factory-installed RV mattresses and decided to solve the problem themselves — from the manufacturing floor up. The company has owned and operated its factory in South Carolina for over 25 years. This is not marketing language. In a DTC mattress market full of brands that are essentially websites with outsourced production, Tochta is the real thing. They control every layer, every material, every quality decision. That institutional knowledge and manufacturing control is what makes the product genuinely better — and it is what makes the brand's credibility claims defensible.</p>
+    <p>Every Tochta mattress is <strong>CertiPUR-US certified</strong> — a rigorous foam safety standard that tests for harmful chemicals, emissions, and heavy metals. More importantly for the RV market, Tochta is <strong>explicitly fiberglass-free</strong>. This matters enormously. Budget mattresses — including many factory RV mattresses and cheap online alternatives — use fiberglass as a fire retardant hidden inside the foam. When disturbed or when the cover is removed, fiberglass can contaminate an entire space and cause serious skin and respiratory irritation. RV owner communities on forums and Reddit are increasingly aware of this problem, and Tochta's fiberglass-free certification is becoming a stronger purchase signal every month.</p>
+    <p>The product line has three tiers, each solving a distinct version of the same core problem.</p>
+  </div>
+
+  <!-- JOURNEY -->
+  <div class="product-card mt2">
+    <div class="product-header">
+      <div>
+        <p class="product-name">Journey — "Great Value"</p>
+        <p class="product-tagline">Entry-level. Does not compromise on real foam quality. Built for bunk beds, solo travelers, and first-time upgraders.</p>
+      </div>
+      <span class="pill" style="background:#E6F1FB;color:#0C447C">From $477</span>
     </div>
-    <div class="dc d2">
-      <p class="dn">Deliverable 02</p>
-      <h3 class="dtitle">Permission to fully enjoy the moment</h3>
-      <p class="dbody">Sleep science is explicit: poor sleep quality reduces the intensity of positive emotions. Tochta doesn't sell rest — it sells the ability to feel the trip you're on.</p>
-      <p class="dproof"><strong>Emotional proof:</strong> "Wake up ready to actually be where you are." <strong>Rational proof:</strong> Gel cooling, progressive support layers, quick-recovery foam.</p>
-    </div>
-    <div class="dc d3">
-      <p class="dn">Deliverable 03</p>
-      <h3 class="dtitle">Peace between partners</h3>
-      <p class="dbody">The most cited pain across all personas. One runs hot, one needs firmer, one moves all night. The Divini dual-zone is the only product in the niche that resolves this directly.</p>
-      <p class="dproof"><strong>Emotional proof:</strong> "Finally — a mattress that doesn't make you negotiate your sleep." <strong>Rational proof:</strong> 9 firmness levels per side, 81 combinations, patent-pending.</p>
-    </div>
-    <div class="dc d4">
-      <p class="dn">Deliverable 04</p>
-      <h3 class="dtitle">The end of compromise</h3>
-      <p class="dbody">Every other brand asks RV owners to adapt to what's available. Tochta is the first to ask: "Tell us what you need and we'll build it." A fundamentally different emotional offer.</p>
-      <p class="dproof"><strong>Emotional proof:</strong> "Your RV is custom. Your mattress should be too." <strong>Rational proof:</strong> Custom shape builder, instant quote, any dimension.</p>
+    <div class="product-body">
+      <div class="ig2">
+        <div class="ic">
+          <p class="ic-label">What it solves</p>
+          <p class="ic-text">The customer who knows they need something better than the factory mattress but doesn't want to spend $800+. Budget-conscious but not willing to accept garbage foam. Bunk beds. Kids' spaces. Solo travelers on a practical budget.</p>
+        </div>
+        <div class="ic">
+          <p class="ic-label">Why it's not just "cheap foam"</p>
+          <p class="ic-text">Three engineered layers: gel visco cooling memory foam on top, a transition layer in the middle, and a high-density support base. Real layer engineering, not a single block of recycled foam. Available from 4" to 10" thick. CertiPUR-US certified.</p>
+        </div>
+      </div>
+      <p class="pc2-label" style="margin-bottom:8px">The three layers</p>
+      <ul class="layer-list">
+        <li class="layer-item"><div class="layer-num">1</div><div><strong style="color:var(--text)">Gel Visco Cooling Memory Foam</strong> — Gel-bead infusion wicks heat away from the surface. Provides cooling, pressure relief, and body contouring. Responsive feel — you sleep "on" the mattress rather than sinking into it.</div></li>
+        <li class="layer-item"><div class="layer-num">2</div><div><strong style="color:var(--text)">Transition Foam</strong> — Bridges the comfort layer to the dense support base. Prevents sleep disruption caused by feeling the hard support layer directly beneath you.</div></li>
+        <li class="layer-item"><div class="layer-num">3</div><div><strong style="color:var(--text)">High-Density Support Foam</strong> — Structural foundation. Provides firm, consistent support across the full mattress surface.</div></li>
+      </ul>
     </div>
   </div>
 
-  <p class="sey" style="margin-top:3rem">Target personas</p>
-  <div class="sr"></div>
-  <div class="pr">
-    <div class="pc">
-      <div class="pi2" style="background:#E6F1FB;color:#0C447C">01</div>
-      <p class="pn">Weekend Wanderer</p>
-      <p class="pd">Couples, 45–65. 4–12 weekends/yr. Normalized bad sleep as "part of camping."</p>
-      <p class="pd" style="font-style:italic;font-size:11px">"We just got back from a two-week trip and I can't take one more night on that mattress."</p>
-      <span class="pp" style="background:#E6F1FB;color:#0C447C">Utopia / Divini</span>
+  <!-- UTOPIA -->
+  <div class="product-card">
+    <div class="product-header">
+      <div>
+        <p class="product-name">Utopia — "Most Popular" ⭐</p>
+        <p class="product-tagline">The product most people should buy. Premium comfort. The "mythical perfect mattress" — 4 layers, latex bounce, quick-recovery foam.</p>
+      </div>
+      <span class="pill" style="background:#EAF3DE;color:#27500A">From $434</span>
     </div>
-    <div class="pc">
-      <div class="pi2" style="background:#EAF3DE;color:#27500A">02</div>
-      <p class="pn">Full-Time RV Lifer</p>
-      <p class="pd">Remote workers &amp; retirees. RV is their full-time home. Deep researchers, trust-driven.</p>
-      <p class="pd" style="font-style:italic;font-size:11px">"If I'm going to live in this thing, I need to sleep as well as I would at home."</p>
-      <span class="pp" style="background:#EAF3DE;color:#27500A">Divini</span>
+    <div class="product-body">
+      <div class="ig2">
+        <div class="ic">
+          <p class="ic-label">What it solves</p>
+          <p class="ic-text">The couple who needs something genuinely premium. Side sleepers. People with chronic back pain. Full-timers who need home-quality sleep every night. Anyone who has been burned by cheaper foam and needs to get it right this time.</p>
+        </div>
+        <div class="ic">
+          <p class="ic-label">The key innovation</p>
+          <p class="ic-text">"Quick recovery" foam — the top layer avoids the notorious sinking/bottoming-out problem of traditional memory foam. You get contouring and pressure relief without feeling trapped. A latex layer adds natural bounce and responsiveness that pure foam can't match.</p>
+        </div>
+      </div>
+      <p class="pc2-label" style="margin-bottom:8px">The four layers</p>
+      <ul class="layer-list">
+        <li class="layer-item"><div class="layer-num">1</div><div><strong style="color:var(--text)">Dual Phase Change "Quick Recovery" Gel Memory Foam</strong> — The key innovation. Gel beads adapt to different weights and positions. Prevents the sinking/trapped feeling of traditional memory foam. Active temperature regulation.</div></li>
+        <li class="layer-item"><div class="layer-num">2</div><div><strong style="color:var(--text)">Latex Transition Layer</strong> — Natural bounce and responsiveness. Prevents the sluggish "stuck in mud" feeling. This is the layer that makes the Utopia feel distinctly different from the Journey.</div></li>
+        <li class="layer-item"><div class="layer-num">3</div><div><strong style="color:var(--text)">Progressive Support Foam</strong> — Continues the transition from soft comfort to firm support. Prevents pressure transfer between layers.</div></li>
+        <li class="layer-item"><div class="layer-num">4</div><div><strong style="color:var(--text)">High-Density Support Base</strong> — Long-term structural integrity. Combined with the other layers, this is what enables the 10-year warranty.</div></li>
+      </ul>
     </div>
-    <div class="pc">
-      <div class="pi2" style="background:#FAEEDA;color:#633806">03</div>
-      <p class="pn">Long-Haul Trucker</p>
-      <p class="pd">30–60. 3–5 nights/week in sleeper cab. Non-standard dimensions. Skeptical of marketing.</p>
-      <p class="pd" style="font-style:italic;font-size:11px">"I'm on the road 5 days a week. I can't afford to not sleep well."</p>
-      <span class="pp" style="background:#FAEEDA;color:#633806">Journey / Utopia</span>
+  </div>
+
+  <!-- DIVINI -->
+  <div class="product-card">
+    <div class="product-header">
+      <div>
+        <p class="product-name">Divini — "Customized Comfort" — Patent Pending 🏆</p>
+        <p class="product-tagline">The flagship. The only mattress in the RV/custom niche with dual-zone independent firmness. Built for couples who refuse to compromise.</p>
+      </div>
+      <span class="pill" style="background:#FAEEDA;color:#633806">From $693</span>
     </div>
-    <div class="pc">
-      <div class="pi2" style="background:#EEEDFE;color:#3C3489">04</div>
-      <p class="pn">Custom Home Sleeper</p>
-      <p class="pd">28–55. Boats, lofts, Murphy beds, antique frames. Has exhausted all workarounds.</p>
-      <p class="pd" style="font-style:italic;font-size:11px">"I've been to every store. Nothing fits."</p>
-      <span class="pp" style="background:#EEEDFE;color:#3C3489">Utopia / Divini</span>
+    <div class="product-body">
+      <div class="ig2">
+        <div class="ic">
+          <p class="ic-label">What it solves</p>
+          <p class="ic-text">The single most cited pain point in the entire customer base: two people sharing one bed who need different things. One runs hot, one needs firmer support, one is a light sleeper, one moves constantly. The Divini gives each person independent control over their side of the bed — 9 firmness levels each, 81 possible combinations across the couple.</p>
+        </div>
+        <div class="ic">
+          <p class="ic-label">Why it's a category of its own</p>
+          <p class="ic-text">No other brand in the RV or custom mattress niche offers this. Not Wilderness RV. Not Brooklyn Bedding. Not anyone. The patent-pending technology means competitors cannot legally replicate it. This is not a feature — it is a full product category that Tochta owns exclusively.</p>
+        </div>
+      </div>
+      <div class="warning-box">
+        <p class="warning-label">For the content team — this is the most important product story</p>
+        <p class="warning-text">The Divini is currently Tochta's most undermarketed asset. It deserves its own campaign, its own dedicated content series, and couple-focused creative that no other brand in this space can match. Every piece of content that touches couples as an audience should eventually point toward the Divini. The "peace between partners" story is the most emotionally powerful in the entire lineup — and it's 100% Tochta's exclusively.</p>
+      </div>
+      <p class="pc2-label" style="margin-bottom:8px">How the dual-zone mechanism works</p>
+      <div class="ig3">
+        <div class="ic"><p class="ic-label">Step 1</p><p class="ic-text">Unzip the outer cover of the mattress. Each side has its own foam layer compartment — left and right are completely independent.</p></div>
+        <div class="ic"><p class="ic-label">Step 2</p><p class="ic-text">Each compartment contains three interchangeable foam layers: soft, medium, and firm. Rearrange them in any order to achieve your preferred feel.</p></div>
+        <div class="ic"><p class="ic-label">Step 3</p><p class="ic-text">Zip back up. Total time: approximately 5–7 minutes. If a combination doesn't work, Tochta will ship an additional layer at no charge.</p></div>
+      </div>
     </div>
+  </div>
+
+  <div class="prose mt2">
+    <p><strong>The custom builder — Tochta's single most important conversion tool.</strong> Every mattress Tochta makes can be built to any size and any shape. Angled corners, radius edges, notched cuts for walls or obstacles, hinged configurations for fold-up platforms — all available, all configurable online, all with an instant price quote. No phone calls. No waiting. You enter your exact dimensions, choose your corner geometry, select your model, and get a precise price immediately. This is technically non-trivial — no major competitor matches it at this quality level. The builder is not just a product feature. It is the reason a significant portion of Tochta's customers buy from them at all.</p>
+    <p>For content purposes: <strong>the custom builder is the end destination of virtually every piece of content you create</strong>. Educational content about sleep quality, lifestyle content about RV living, problem-awareness content about factory foam, social proof content from real customers — all of it should ultimately direct people toward the builder. That is where conviction becomes conversion.</p>
   </div>
 </div></div>
 </section>
 
-<!-- CAROUSELS -->
+<div class="pi"><div class="df"></div></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 03 — PERSONAS -->
+<!-- ============================================================ -->
+<section id="personas">
+<div class="pi"><div class="sw">
+  <p class="sey">Section 03</p>
+  <h2 class="st">The customers — who they are, what they feel, and what finally moves them</h2>
+  <p class="sd">This is the most important section for anyone creating content. You need to understand these four people deeply — not as demographic profiles, but as human beings with specific frustrations, specific fears, and specific moments of decision. If you don't feel like you know them, read this section again.</p>
+  <div class="sr"></div>
+
+  <div class="prose">
+    <p>A critical principle before we profile each persona: <strong>none of these people are shopping for a mattress when they first encounter Tochta.</strong> They are living with a problem they have partially normalized. They have told themselves "this is just how it is" and moved on. The job of our content is not to find people who are already in the market — it is to wake up the people who have accepted their situation and show them that it doesn't have to be this way.</p>
+    <p>This is the difference between demand capture and demand creation. Most ads capture demand that already exists. The best Tochta content creates demand by making people feel a pain they had stopped consciously noticing. That is a harder and more important job. It requires empathy, specificity, and the willingness to name things exactly.</p>
+  </div>
+
+  <!-- PERSONA 01 -->
+  <div class="persona-full mt2">
+    <div class="persona-top">
+      <div class="persona-icon-lg" style="background:#E6F1FB;color:#0C447C">01</div>
+      <div>
+        <p class="persona-title">The Weekend Wanderer</p>
+        <p class="persona-sub">Couples, ages 45–65 · Suburban homeowners · $80K–$150K household income · 4–12 RV weekends per year</p>
+      </div>
+      <span class="pill" style="background:#E6F1FB;color:#0C447C">→ Utopia / Divini</span>
+    </div>
+    <div class="persona-body">
+      <div class="prose">
+        <p>This is the largest and most accessible persona for Tochta. They love their RV. It represents freedom, family time, and a particular kind of American life they've worked hard to afford. They've spent real money on the vehicle itself — often $50,000 to $150,000+ — and they use it regularly. But there's a quiet problem that follows every trip home: they feel worse than when they left. Their backs hurt. They're tired in a way that isn't just from driving. And they've started to wonder whether RV trips are actually restful at all.</p>
+        <p>The key psychological reality of this persona is <strong>normalization</strong>. They have accepted that sleeping in an RV means sleeping worse. They've tried to fix it: a $90 memory foam topper from Amazon, a gel pad from Costco, layering two toppers on top of each other. None of it solved the problem, because none of it addressed the actual issue — the degraded, inadequate foam base underneath. But they don't know that. They think the problem is with their bodies, their age, their sleeping habits.</p>
+        <p>The other defining feature of this persona is the <strong>couples dimension</strong>. In almost every case, there are two people sharing this mattress — and they have different needs. One sleeps hot and kicks the covers off all night. The other needs firmer support for lower back pain. One is a light sleeper disturbed by every movement. The other snores. They've been politely accommodating each other's discomfort for years, and it has become a source of low-grade tension that neither of them acknowledges openly. The Divini was specifically engineered to resolve this exact situation, and the Weekend Wanderer is the bull's-eye target for that product.</p>
+      </div>
+      <div class="persona-grid mt1">
+        <div class="pc2"><p class="pc2-label">Emotional pain</p><p class="pc2-text">They feel cheated. They invested heavily in this dream and the mattress is quietly undermining it. Every bad trip deepens the feeling that something is wrong but they can't quite name what. They blame themselves — "I just can't sleep away from home" — when the real culprit is the foam.</p></div>
+        <div class="pc2"><p class="pc2-label">Rational pain</p><p class="pc2-text">Waking up sore ruins the first hours of every trip day. They spend the first morning of a vacation stiff and irritable. Coffee helps a little. But the damage to the trip's mood is done before anyone sees the sunrise.</p></div>
+        <div class="pc2"><p class="pc2-label">The hidden fear holding them back</p><p class="pc2-text">"Custom means expensive and complicated." They assume ordering a custom mattress means phone calls, confusing measurements, long waits, and the risk of getting it wrong. The instant-quote builder exists to demolish this fear — but they have to see it to believe it.</p></div>
+        <div class="pc2"><p class="pc2-label">What finally breaks them</p><p class="pc2-text">One particularly bad trip — both wake up sore every single morning, someone says something on the drive home, and this time one of them actually searches for a solution instead of just agreeing to fix it later. That search is the moment Tochta must own.</p></div>
+      </div>
+      <div class="trigger-box">
+        <p class="trigger-label">The breaking point quote</p>
+        <p class="trigger-quote">"We just got back from two weeks in Yellowstone and I woke up sore every single morning. We spent $8,000 on that trip. I can't do this anymore."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONA 02 -->
+  <div class="persona-full">
+    <div class="persona-top">
+      <div class="persona-icon-lg" style="background:#EAF3DE;color:#27500A">02</div>
+      <div>
+        <p class="persona-title">The Full-Time RV Lifer</p>
+        <p class="persona-sub">Remote workers &amp; retirees, ages 35–65 · RV is primary or secondary full-time home · High motivation to optimize every element of the living space</p>
+      </div>
+      <span class="pill" style="background:#EAF3DE;color:#27500A">→ Divini</span>
+    </div>
+    <div class="persona-body">
+      <div class="prose">
+        <p>This persona has made the biggest commitment. The RV is not a vacation vehicle — it is their home. They have thought carefully about every system in the rig: the solar setup, the water filtration, the kitchen appliances, the wifi situation, the storage configuration. They approach RV living the way a well-resourced person approaches home design. They invest in quality because they live with every decision every day.</p>
+        <p>The Full-Timer does deep research before buying anything. They read forums, watch YouTube reviews, compare specs, ask questions in Facebook groups. They are not impulse buyers, but when they decide, they spend confidently and without regret. Peer recommendations from other full-timers carry more weight than any advertising. A single trusted voice in r/RVliving or a full-timer's YouTube review of a Tochta mattress is worth more than months of paid ad spend with this audience.</p>
+        <p>The emotional tension for this persona is the gap between their commitment to the lifestyle and the one element that hasn't been upgraded yet. They've upgraded everything visible. The mattress is the last holdout — partly because it's inconvenient to deal with, partly because it requires measurement and customization, and partly because they've told themselves they can live with it. But they can't, and they know it. Sleeping on a degrading factory mattress 365 nights a year is not sustainable. At some point the calculus tips.</p>
+        <p>This persona also cares deeply about <strong>durability and longevity</strong>. They're not buying a mattress for weekends. They're buying it for their home. The 10-year warranty, the dense layered construction, and the 25-year factory history all matter enormously here. They need to know that this purchase will last, and they need to trust that the company behind it will still be there if something goes wrong.</p>
+      </div>
+      <div class="persona-grid mt1">
+        <div class="pc2"><p class="pc2-label">Emotional pain</p><p class="pc2-text">Their identity is tied to the lifestyle choice they made. A bad mattress feels like a crack in the dream — a signal that full-time RV life is less livable than they committed to. Fixing it is almost an act of loyalty to the choice they made.</p></div>
+        <div class="pc2"><p class="pc2-label">Rational pain</p><p class="pc2-text">365 nights a year on a degrading mattress. Chronic back pain accumulates differently when there's no "home bed" to recover on. They need real density, real support, and a product that won't need replacing in two years.</p></div>
+        <div class="pc2"><p class="pc2-label">The hidden fear</p><p class="pc2-text">"Is this company legitimate? Will they honor the warranty in year 7? Are they just another DTC brand with no real manufacturing behind them?" They have been burned by online brands before. Factory proof is not just reassuring — it is the deciding factor.</p></div>
+        <div class="pc2"><p class="pc2-label">What finally breaks them</p><p class="pc2-text">A specific forum post or video from another full-timer saying "I finally found it." This persona converts through community. A trusted peer recommendation in the right forum at the right time converts faster than any paid campaign.</p></div>
+      </div>
+      <div class="trigger-box">
+        <p class="trigger-label">The breaking point quote</p>
+        <p class="trigger-quote">"This is my house. I've upgraded everything about my life on the road. Why am I still sleeping on the mattress that came with the rig?"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONA 03 -->
+  <div class="persona-full">
+    <div class="persona-top">
+      <div class="persona-icon-lg" style="background:#FAEEDA;color:#633806">03</div>
+      <div>
+        <p class="persona-title">The Long-Haul Trucker</p>
+        <p class="persona-sub">Professional drivers, ages 30–60 · 3–5 nights per week in sleeper cab · Back pain and sleep deprivation are occupational realities</p>
+      </div>
+      <span class="pill" style="background:#FAEEDA;color:#633806">→ Journey / Utopia</span>
+    </div>
+    <div class="persona-body">
+      <div class="prose">
+        <p>The Long-Haul Trucker is in many ways the most underserved persona in the mattress market. Their sleeping situation is uniquely challenging: the sleeper cab of a commercial truck has completely non-standard dimensions, requires a mattress that can handle heavy daily use, and needs to provide genuine lumbar support for someone who has also been sitting for many hours a day. Bad sleep for a trucker is not just uncomfortable — it is a safety issue. Fatigue behind the wheel is one of the leading causes of serious commercial vehicle accidents.</p>
+        <p>This persona has deep and well-founded skepticism of marketing. They have heard "built for truckers" from brands that still only offer standard sizes. They have tried mattresses that don't fit, toppers that slide off overnight, and cheap foam pads that bottomed out within weeks. They have spent money solving this problem multiple times and it has not worked. When they encounter Tochta's custom builder and see that they can enter their exact cab dimensions and get a precise price immediately, the reaction is not excitement — it is relief mixed with cautious skepticism. The content challenge is convincing them that this is actually different.</p>
+        <p>This persona converts almost exclusively through peer recommendation. Driver communities — Facebook groups, trucking forums, conversations at truck stops — are the primary trust networks. Content that speaks directly and practically to their specific situation, uses the right language, and is backed by real driver testimonials has a chance. Generic lifestyle content does not reach them.</p>
+      </div>
+      <div class="persona-grid mt1">
+        <div class="pc2"><p class="pc2-label">Emotional pain</p><p class="pc2-text">They feel invisible. Nobody designs products for them specifically. RV mattress brands talk about camping trips. They need something built for occupational daily use in a non-standard space — and the industry treats them as an afterthought.</p></div>
+        <div class="pc2"><p class="pc2-label">Rational pain</p><p class="pc2-text">Cab mattress dimensions are wildly non-standard. Standard sizes don't fit. They've tried cut-down mattresses, folded foam, and stacked pads — all fail. The right size literally doesn't exist in any store. The custom builder is the only real answer.</p></div>
+        <div class="pc2"><p class="pc2-label">The hidden fear</p><p class="pc2-text">"This is just another brand that says 'fits most sleeper cabs.'" The custom builder is the proof, not the promise. Content should lead with the builder's ability to handle exact cab dimensions — not lifestyle imagery.</p></div>
+        <div class="pc2"><p class="pc2-label">What finally breaks them</p><p class="pc2-text">Another driver they trust recommends it. Or their back gets bad enough that they recognize this is an occupational health problem, not just discomfort. The "I can't keep doing this to my body" moment after a particularly bad run.</p></div>
+      </div>
+      <div class="trigger-box">
+        <p class="trigger-label">The breaking point quote</p>
+        <p class="trigger-quote">"I drive 300,000 miles a year and I sleep in this cab 5 nights a week. My back is wrecked. I need something that actually fits and actually works."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONA 04 -->
+  <div class="persona-full">
+    <div class="persona-top">
+      <div class="persona-icon-lg" style="background:#EEEDFE;color:#3C3489">04</div>
+      <div>
+        <p class="persona-title">The Custom Home Sleeper</p>
+        <p class="persona-sub">Homeowners, ages 28–55 · Non-standard frames, boat berths, lofts, Murphy beds, antique frames · Has already exhausted all standard solutions</p>
+      </div>
+      <span class="pill" style="background:#EEEDFE;color:#3C3489">→ Utopia / Divini</span>
+    </div>
+    <div class="persona-body">
+      <div class="prose">
+        <p>This persona is often overlooked in Tochta's marketing but represents a significant and highly motivated buyer segment. They are not RV owners — they are homeowners with a sleeping space that doesn't conform to standard mattress sizes. This includes people with antique bed frames that pre-date standardization, custom-built loft beds, Murphy beds in small apartments, boat berths and marine sleeping spaces, and any number of other non-standard configurations.</p>
+        <p>What makes this persona particularly interesting from a conversion standpoint is that <strong>they are already convinced they need a custom mattress</strong>. The persuasion work is essentially done before they arrive. They have been to every mattress store. They have measured three times. They have searched online for "custom mattress" and found confusing options with no transparent pricing and multi-week lead times. When they find Tochta's custom builder and see that they can enter their exact dimensions, choose their corner geometry, and get an instant price — without calling anyone — the reaction is almost immediate conversion intent. The friction for this persona is not persuasion. It is discovery and fear of measuring wrong.</p>
+        <p>Content for this persona should focus on demonstrating that the custom builder can handle their specific scenario. Showing unusual shapes being built — radius corners, notched cuts, hinged configurations, unusual widths — is the content that converts this buyer. They need to see their problem solved before they believe it can be.</p>
+      </div>
+      <div class="persona-grid mt1">
+        <div class="pc2"><p class="pc2-label">Emotional pain</p><p class="pc2-text">Years of living with a space that doesn't feel finished — a beautiful loft or custom bedroom undermined by a mattress that doesn't fit right. The gap, the overhang, the wrong dimensions have bothered them since day one. Relief is the dominant emotion when Tochta solves it.</p></div>
+        <div class="pc2"><p class="pc2-label">Rational pain</p><p class="pc2-text">Every workaround has failed. Cutting a standard mattress creates uneven sleeping surfaces. Two twin mattresses side by side create a gap. "Close enough" sizes are never close enough once you're sleeping on them every night.</p></div>
+        <div class="pc2"><p class="pc2-label">The hidden fear</p><p class="pc2-text">"What if I measure wrong and spend $700 on a mattress that doesn't fit?" This is the single biggest stall point. Content that demystifies the measuring process — with visuals, clear instructions, and reassurance about customer support if something goes wrong — is the conversion unlock.</p></div>
+        <div class="pc2"><p class="pc2-label">What finally breaks them</p><p class="pc2-text">Seeing the builder handle their exact case. Radius corners. Unusual widths. The visual confirmation that "yes, we can do that" for their specific problem triggers near-immediate purchase intent. Show the unusual case, not the standard one.</p></div>
+      </div>
+      <div class="trigger-box">
+        <p class="trigger-label">The breaking point quote</p>
+        <p class="trigger-quote">"I've been searching for two years. My bed frame is custom-built and nothing fits it. I can't believe there's actually a company that will build it to my exact measurements."</p>
+      </div>
+    </div>
+  </div>
+
+</div></div>
+</section>
+
+<div class="pi"><div class="df"></div></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 04 — EMOTIONAL STRATEGY -->
+<!-- ============================================================ -->
+<section id="emotional">
+<div class="pi"><div class="sw">
+  <p class="sey">Section 04</p>
+  <h2 class="st">The emotional strategy — why feeling comes before selling</h2>
+  <p class="sd">This section explains the strategic framework that governs every piece of content in this campaign. Understanding why we communicate the way we do is as important as knowing what to say.</p>
+  <div class="sr"></div>
+
+  <div class="prose">
+    <p>The most important strategic principle in this entire document is this: <strong>Tochta's customers are not buying a mattress. They are buying back the experience they already paid for.</strong> The RV cost $80,000. The trip was planned for months. The full-time life was a major life decision. The custom home was years in the making. And in each case, the one thing quietly undermining all of it is the thing they sleep on. The mattress is the last broken piece of a dream they've already committed to.</p>
+    <p>This reframing changes everything about how we communicate. If the product is "a better mattress," we are competing on specs and price with every other foam company on the internet. If the product is "the completion of a dream you've already invested in," we are in a completely different conversation — one that is emotionally resonant, personally relevant, and impossible for a cheaper competitor to win.</p>
+    <p>There is also hard science behind the deepest emotional argument in this campaign. Research published in the Journal of Sleep Research found that while negative emotions survive sleep deprivation relatively intact, <strong>positive feelings become significantly less intense when sleep quality is poor</strong>. This is not a minor effect. It means that the RV owner sleeping on a degrading factory mattress is not just tired when they wake up — they are literally less capable of feeling joy that day. The sunrise at the Grand Canyon hits less hard. The family dinner around the campfire is less funny. The hike registers with less wonder. Bad sleep doesn't just make you tired. It steals the feeling from the places you came all this way to see. That is the deepest emotional truth in this entire campaign, and it should inform the most powerful pieces of content.</p>
+  </div>
+
+  <div class="insight mt2">
+    <p class="insight-label">The core strategic insight</p>
+    <p class="insight-quote">"RV owners don't buy a mattress. They buy back the trip they already paid for."</p>
+    <p class="insight-sub">Every piece of content in this campaign exists to make that truth visible to the right person at the right moment. Not to sell them a product, but to show them what they're losing by not having one.</p>
+  </div>
+
+  <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--text);margin:2.5rem 0 1rem">The four emotional deliverables</h3>
+  <div class="prose">
+    <p>These are the four things Tochta emotionally delivers to its customers — not product features, but felt outcomes. Every piece of content should connect to at least one of these. They are listed in strategic priority order.</p>
+  </div>
+
+  <div class="ed-card e1 mt1">
+    <p class="ed-num">Emotional Deliverable 01 — Highest priority</p>
+    <h3 class="ed-title">The completion of the dream</h3>
+    <p class="ed-body">The customer has already made a major commitment — to the RV, to the road trip, to the lifestyle, to the home they built. They are not starting something new; they are trying to complete something they've already begun. The mattress is the last broken piece. When Tochta solves it, the customer isn't just buying comfort — they're closing the loop on an investment they care deeply about. This is why messaging that references the cost of the RV, the planning of the trip, or the commitment to the lifestyle is so effective. It validates the investment they've already made and positions Tochta as the thing that finally makes it whole.</p>
+    <div class="ed-proof">
+      <div class="ed-proof-cell"><p class="ed-proof-label">Emotional proof line</p><p class="ed-proof-text">"You didn't spend that much on your rig to wake up sore every morning."</p></div>
+      <div class="ed-proof-cell"><p class="ed-proof-label">Rational proof</p><p class="ed-proof-text">25-year factory, CertiPUR-US certification, 10-year warranty, free shipping.</p></div>
+    </div>
+  </div>
+
+  <div class="ed-card e2">
+    <p class="ed-num">Emotional Deliverable 02</p>
+    <h3 class="ed-title">Permission to fully enjoy the moment</h3>
+    <p class="ed-body">This is the sleep-science argument made emotional. The research is clear: poor sleep quality reduces the intensity of positive emotions. Tochta doesn't sell rest — it sells the ability to actually feel the places you're in. The view from the mountain. The family conversation at the campfire. The freedom of the open road. These experiences are what the customer is chasing — but they are emotionally inaccessible when you're exhausted. Tochta removes that barrier. Content built around this deliverable shows the contrast between what the experience is supposed to feel like and what it feels like when you're running on bad sleep. The visual language is landscapes and moments that should be transcendent, slightly dimmed by the fog of exhaustion.</p>
+    <div class="ed-proof">
+      <div class="ed-proof-cell"><p class="ed-proof-label">Emotional proof line</p><p class="ed-proof-text">"Wake up ready to actually be where you are."</p></div>
+      <div class="ed-proof-cell"><p class="ed-proof-label">Rational proof</p><p class="ed-proof-text">Gel cooling layers, quick-recovery foam, progressive support system, latex bounce layer.</p></div>
+    </div>
+  </div>
+
+  <div class="ed-card e3">
+    <p class="ed-num">Emotional Deliverable 03</p>
+    <h3 class="ed-title">Peace between partners</h3>
+    <p class="ed-body">Across all four personas, the single most commonly cited frustration is the couples' sleep conflict. One person runs hot. The other needs firmer support. One is a light sleeper. The other moves constantly. They have been silently accommodating each other's discomfort for years — it has become a low-grade source of tension that neither person acknowledges directly, but both feel. The Divini dual-zone is the only product in the RV or custom mattress market that directly and completely resolves this. No compromise needed. No one has to sacrifice their comfort for the other's. Both people win. This is not just a product benefit — it is a relationship benefit, and it should be communicated as such. Content for this deliverable should be intimate, knowing, and slightly playful — the tone of a brand that understands what it's like to be in this situation because they've seen it thousands of times.</p>
+    <div class="ed-proof">
+      <div class="ed-proof-cell"><p class="ed-proof-label">Emotional proof line</p><p class="ed-proof-text">"Finally — a mattress that doesn't make you negotiate your sleep."</p></div>
+      <div class="ed-proof-cell"><p class="ed-proof-label">Rational proof</p><p class="ed-proof-text">9 firmness levels per side, 81 possible combinations, patent-pending dual-zone technology.</p></div>
+    </div>
+  </div>
+
+  <div class="ed-card e4">
+    <p class="ed-num">Emotional Deliverable 04</p>
+    <h3 class="ed-title">The end of compromise</h3>
+    <p class="ed-body">Every other mattress brand in the world asks the customer to adapt to what's available. Tochta is the first and only brand in this space to reverse that dynamic: "Tell us exactly what you need and we'll build it." This is a fundamentally different emotional offer — not "here's what we have, pick one" but "what do you need? We'll make it." For the Custom Home Sleeper and the Trucker, this is the entire story. For every other persona, it is a powerful proof of commitment — a brand that respects the specificity of your situation enough to solve it exactly, not approximately. The custom builder is the physical manifestation of this deliverable. It should be demonstrated, not just described.</p>
+    <div class="ed-proof">
+      <div class="ed-proof-cell"><p class="ed-proof-label">Emotional proof line</p><p class="ed-proof-text">"Your RV is custom. Your mattress should be too."</p></div>
+      <div class="ed-proof-cell"><p class="ed-proof-label">Rational proof</p><p class="ed-proof-text">Custom shape builder with instant quote, any dimension, angled/radius/notched options.</p></div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--text);margin:2.5rem 0 1rem">The message sequence — non-negotiable</h3>
+  <div class="prose">
+    <p>The order in which we communicate matters as much as what we say. Lead with rational information and you lose the customer before they've felt anything. Lead with emotion, bridge to empathy, and close with rational proof — in that order, every time. This applies to every piece of content, from a single-frame Instagram ad to a five-slide carousel to a product page.</p>
+  </div>
+  <div class="ladder mt1">
+    <div class="lrung dark">
+      <p class="lr-num">01</p>
+      <p class="lr-label">Hook — emotional</p>
+      <p class="lr-text">3 to 6 words. Speaks directly to the felt pain. No product, no features, no brand name. Pure recognition. The person should feel seen before being sold anything.</p>
+      <p class="lr-example">"You didn't come this far to sleep this bad."</p>
+    </div>
+    <div class="lrung">
+      <p class="lr-num">02</p>
+      <p class="lr-label">Bridge — empathy</p>
+      <p class="lr-text">1 to 2 sentences. Names the real cause of the problem — factory foam economics, or the one-size-fits-all industry. Validates their frustration. Positions Tochta as someone who lived this and decided to fix it.</p>
+      <p class="lr-example">"Factory RV mattresses are built to a price point, not a sleep standard. We know — we used to sleep on them too."</p>
+    </div>
+    <div class="lrung dark">
+      <p class="lr-num">03</p>
+      <p class="lr-label">Close — rational proof</p>
+      <p class="lr-text">3 to 5 facts that earn the trust the emotional hook created. Factory history, certifications, custom builder, trial period, warranty. Brief and specific — not a spec sheet.</p>
+      <p class="lr-example">"Built in our SC factory. Any size, any shape. 100-night trial. 10-year warranty."</p>
+    </div>
+  </div>
+
+  <div class="hbox mt2">
+    <p class="hbox-label">What to never lead with</p>
+    <p class="hbox-text">Never lead with specs. Never lead with price. Never use the word "premium" without showing what premium means — it has no meaning left. Never be vague about the pain — "better sleep" is too soft. Name the specific problem: morning back pain, waking up sore, too exhausted to enjoy the trip, the couple who needs different things. Specificity is the difference between content that stops the scroll and content that disappears into the feed.</p>
+  </div>
+
+</div></div>
+</section>
+
+<div class="pi"><div class="df"></div></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 05 — CAROUSELS -->
+<!-- ============================================================ -->
 <section id="carousels">
 <div class="pi"><div class="sw">
-  <p class="sey">Part 03 — Carousel Campaigns</p>
-  <h2 class="st">3 Instagram carousel briefs</h2>
-  <p class="sd">Each carousel is one emotional journey — hook, validate, reframe, solve, convert. 5 slides each.</p>
+  <p class="sey">Section 05</p>
+  <h2 class="st">3 Instagram carousel campaigns</h2>
+  <p class="sd">Each carousel is a complete emotional journey: hook the person, validate their pain, name the real problem, show the solution, close with a clear call to action. 5 slides each. Full copy and visual direction included.</p>
   <div class="sr"></div>
 
   <!-- C1 -->
@@ -271,60 +690,35 @@ footer{background:var(--navy);padding:2.5rem 3rem;margin-top:5rem}
       <div>
         <p class="cnum">Carousel 01 of 03</p>
         <p class="cname">"You didn't come this far to sleep this bad."</p>
-        <span class="pill" style="background:#E6F1FB;color:#0C447C;margin-top:6px;display:inline-block">Weekend Wanderer — couples, 45–65</span>
+        <span class="pill" style="background:#E6F1FB;color:#0C447C;margin-top:6px;display:inline-block">Weekend Wanderer — couples, 45–65 &nbsp;·&nbsp; Emotional deliverable: The completion of the dream</span>
       </div>
     </div>
-    <div class="cb">
+    <div class="cbody">
       <div class="ds">
-        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">The stolen vacation. They invested everything in this trip — and the mattress quietly took it from them. Guilt + frustration + recognition.</p></div>
-        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Warm golden-hour light. Real couple in a real RV — not models. Morning coffee. Beautiful destination contrasting with how they feel inside.</p></div>
-        <div class="dcell"><p class="dlbl">Color &amp; type</p><p class="dtxt">Deep navy backgrounds. Cream/warm white text. Serif headlines. Brand green CTA on final slide. Premium, warm, editorial.</p></div>
+        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">The stolen vacation. They invested everything — the money, the planning, the anticipation — and the mattress quietly took it from them every morning. Guilt, frustration, and the moment of recognition.</p></div>
+        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Warm golden-hour light. Real couple in a real rig — not models. Morning coffee scene. The beauty of the destination contrasting with how they feel inside is the visual argument.</p></div>
+        <div class="dcell"><p class="dlbl">Color &amp; type direction</p><p class="dtxt">Deep navy backgrounds. Cream and warm white text. Serif headline font — warm, editorial. Brand green CTA on final slide. Premium, intimate, real.</p></div>
       </div>
       <p class="sl">Slide-by-slide copy</p>
       <div class="srow">
-        <div class="sn" style="background:#E6F1FB;color:#0C447C">1</div>
-        <div>
-          <p class="srole">Cover — the hook</p>
-          <p class="shd">"You didn't come this far to sleep this bad."</p>
-          <p class="scopy">No subtext. No product. Just a line that stops the scroll — because every RV couple has felt this and nobody has ever said it to them directly.</p>
-          <p class="vn">Wide shot of a stunning campsite at golden hour — mountains, lake, forest. The RV is parked perfectly. The contrast between that beauty and how they feel inside is the entire emotional argument.</p>
-        </div>
+        <div class="snum" style="background:#E6F1FB;color:#0C447C">1</div>
+        <div><p class="srole">Cover — the hook</p><p class="shd">"You didn't come this far to sleep this bad."</p><p class="scopy">No product. No brand. No subtext. Just a line that stops the scroll because every RV couple has felt this and nobody has ever said it to them directly before.</p><p class="vn">Wide shot of a stunning campsite at golden hour — mountains, lake, forest. The RV is perfectly parked. The outside is breathtaking. The contrast with how they feel inside is the entire argument.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#E6F1FB;color:#185FA5">2</div>
-        <div>
-          <p class="srole">Validate the pain</p>
-          <p class="shd">"800 miles. Six months of planning. And you both woke up sore — again."</p>
-          <p class="scopy">It's not you. It's not your age. It's not "just how camping is." It's the mattress.</p>
-          <p class="vn">Close-up of a hand pressing into a thin, visibly degraded factory foam mattress. The texture says everything without a word.</p>
-        </div>
+        <div class="snum" style="background:#E6F1FB;color:#185FA5">2</div>
+        <div><p class="srole">Validate the pain</p><p class="shd">"800 miles. Six months of planning. And you both woke up sore — again."</p><p class="scopy">It's not you. It's not your age. It's not "just how camping is." It's the mattress.</p><p class="vn">Close-up of a hand pressing into a thin, visibly degraded factory foam mattress. The texture says everything without a word.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#E6F1FB;color:#185FA5">3</div>
-        <div>
-          <p class="srole">Name the real enemy</p>
-          <p class="shd">"RV manufacturers spend thousands on your kitchen. About $80 on your mattress."</p>
-          <p class="scopy">Factory foam is built to a price point, not a sleep standard. You deserve better. We'll build it.</p>
-          <p class="vn">Split composition — left: beautifully finished RV kitchen. Right: thin generic factory mattress. Editorial, not aggressive.</p>
-        </div>
+        <div class="snum" style="background:#E6F1FB;color:#185FA5">3</div>
+        <div><p class="srole">Name the real enemy</p><p class="shd">"RV manufacturers spend thousands on your kitchen. About $80 on your mattress."</p><p class="scopy">Factory foam is built to a price point, not a sleep standard. You deserve better. We'll build it.</p><p class="vn">Split composition — left: beautifully finished RV kitchen. Right: thin generic factory mattress. Editorial framing. Not aggressive — just honest.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#B5D4F4;color:#0C447C">4</div>
-        <div>
-          <p class="srole">The couples conflict — Divini setup</p>
-          <p class="shd">"One of you sleeps hot. One needs firmer. You've been quietly suffering each other's preferences for years."</p>
-          <p class="scopy">There's finally a mattress that lets both of you win. 9 firmness levels per side — independently set. No compromise.</p>
-          <p class="vn">Two sides of a bed — each with its own visual language. Soft vs firm. Cool vs warm. Simple, warm, slightly playful. No people needed.</p>
-        </div>
+        <div class="snum" style="background:#B5D4F4;color:#0C447C">4</div>
+        <div><p class="srole">The couples conflict — Divini setup</p><p class="shd">"One of you sleeps hot. One needs firmer. You've been quietly suffering each other's preferences for years."</p><p class="scopy">There's finally a mattress that lets both of you win. 9 firmness levels per side — independently set. No compromise.</p><p class="vn">Two sides of a bed — each with its own visual language. Soft vs firm. Cool vs warm. Simple, warm, slightly playful. No people needed. The bed tells the story.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#EAF3DE;color:#27500A">5</div>
-        <div>
-          <p class="srole">CTA</p>
-          <p class="shd">"Built in our factory. To your exact size. In about two weeks."</p>
-          <p class="scopy">Custom fit. Real foam. 100-night trial. 10-year warranty. Your next trip deserves this.</p>
-          <p class="vn">A Tochta mattress arriving — compressed box at the RV door, or the moment of first setup inside the rig. Real, tactile, satisfying.</p>
-        </div>
+        <div class="snum" style="background:#EAF3DE;color:#27500A">5</div>
+        <div><p class="srole">CTA</p><p class="shd">"Built in our factory. To your exact size. In about two weeks."</p><p class="scopy">Custom fit. Real foam. 100-night trial. 10-year warranty. Your next trip deserves this.</p><p class="vn">A Tochta mattress arriving — compressed box at the RV door, or the moment of first setup inside the rig. Real, tactile, satisfying.</p></div>
       </div>
     </div>
     <div class="caps">
@@ -340,7 +734,7 @@ We built Tochta for exactly this moment. Real mattresses, built to your exact si
 Your RV deserves a real mattress. So do you.
 
 Build yours → link in bio.</p>
-      <p class="htags">#SleepBetterWithTochta #RVLife #RVLiving #RVTravel #CampingLife #FullTimeRV #RVUpgrade #RVMattress #RoadTrip</p>
+      <p class="htags">#SleepBetterWithTochta #RVLife #RVLiving #RVTravel #CampingLife #FullTimeRV #RVUpgrade #RVMattress #RoadTrip #WeekendWarrior</p>
     </div>
   </div>
 
@@ -350,60 +744,35 @@ Build yours → link in bio.</p>
       <div>
         <p class="cnum">Carousel 02 of 03</p>
         <p class="cname">"This is your home. Sleep like it."</p>
-        <span class="pill" style="background:#EAF3DE;color:#27500A;margin-top:6px;display:inline-block">Full-Time RV Lifer — remote workers &amp; retirees</span>
+        <span class="pill" style="background:#EAF3DE;color:#27500A;margin-top:6px;display:inline-block">Full-Time RV Lifer &nbsp;·&nbsp; Emotional deliverable: The completion of the dream + Trust</span>
       </div>
     </div>
-    <div class="cb">
+    <div class="cbody">
       <div class="ds">
-        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">The commitment hook. They chose this life fully. The mattress is the last thing that doesn't match that choice. Fixing it is an act of self-respect.</p></div>
-        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Cinematic. Dramatic landscapes outside, warm lived-in RV interior inside. Real, used rigs — not showroom. Grandeur vs. intimacy.</p></div>
-        <div class="dcell"><p class="dlbl">Color &amp; type</p><p class="dtxt">Darker, moodier palette — deep navy, forest greens, warm amber. Reflective, not aspirational-light. This audience responds to depth.</p></div>
+        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">The commitment hook. They chose this life fully and deliberately. The mattress is the last element that doesn't match the choice. Fixing it is not just practical — it is an act of integrity toward the life they built.</p></div>
+        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Cinematic. Dramatic landscapes outside, warm lived-in RV interior inside. Real, used rigs — not showroom models. The grandeur of the world they travel through vs. the intimacy of how they actually live.</p></div>
+        <div class="dcell"><p class="dlbl">Color &amp; type direction</p><p class="dtxt">Deeper, moodier palette — deep navy, forest greens, warm amber. Reflective and confident, not aspirational-light. This audience responds to depth and authenticity over brightness and polish.</p></div>
       </div>
       <p class="sl">Slide-by-slide copy</p>
       <div class="srow">
-        <div class="sn" style="background:#EAF3DE;color:#27500A">1</div>
-        <div>
-          <p class="srole">Cover — identity hook</p>
-          <p class="shd">"This isn't a vacation. It's your life. Sleep like it."</p>
-          <p class="scopy">Direct identity affirmation before a single product is mentioned. This person wants to be seen as different from weekend campers — and this line does that in one breath.</p>
-          <p class="vn">Stunning wide shot — rig parked at a canyon edge or desert landscape at dusk. The RV isn't a toy. It's a home against the horizon.</p>
-        </div>
+        <div class="snum" style="background:#EAF3DE;color:#27500A">1</div>
+        <div><p class="srole">Cover — identity hook</p><p class="shd">"This isn't a vacation. It's your life. Sleep like it."</p><p class="scopy">Direct identity affirmation before a single product is mentioned. This person wants to be recognized as different from weekend campers — and this line does exactly that in one breath.</p><p class="vn">Stunning wide shot — rig parked at a canyon edge or desert landscape at dusk. The RV isn't a toy. It's a home against a dramatic horizon.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#EAF3DE;color:#3B6D11">2</div>
-        <div>
-          <p class="srole">The inconsistency tension</p>
-          <p class="shd">"You upgraded the solar. The kitchen. The suspension. You're still sleeping on the mattress it came with."</p>
-          <p class="scopy">We've all done it. We invest in everything that's visible — and sleep on the one thing that matters most.</p>
-          <p class="vn">Beautiful, fully-upgraded RV interior — solar, premium appliances — but the mattress is clearly the original thin factory one. The detail that breaks the room.</p>
-        </div>
+        <div class="snum" style="background:#EAF3DE;color:#3B6D11">2</div>
+        <div><p class="srole">The inconsistency tension</p><p class="shd">"You upgraded the solar. The kitchen. The suspension. You're still sleeping on the mattress it came with."</p><p class="scopy">We've all done it. We invest in everything that's visible — and leave the one thing that matters most untouched.</p><p class="vn">Beautiful, fully-upgraded RV interior — solar system visible, premium appliances — but the mattress is clearly the original thin factory one. The one detail that breaks the room.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#EAF3DE;color:#3B6D11">3</div>
-        <div>
-          <p class="srole">The durability argument</p>
-          <p class="shd">"You need a mattress that lasts as long as the road does."</p>
-          <p class="scopy">Not a foam pad that breaks down by next summer. Real layers. Real density. The same factory — and the same standards — for 25 years.</p>
-          <p class="vn">Factory floor — real workers, real foam being cut. Not stock photography. The manufacturing story is the proof, and it has to feel real.</p>
-        </div>
+        <div class="snum" style="background:#EAF3DE;color:#3B6D11">3</div>
+        <div><p class="srole">The durability argument</p><p class="shd">"You need a mattress that lasts as long as the road does."</p><p class="scopy">Not a foam pad that breaks down by next summer. Real layers. Real density. The same factory — and the same standards — for 25 years.</p><p class="vn">Factory floor — real workers, real foam being cut or layered. NOT stock photography. The authenticity of real production is the proof. It must feel real because it is real.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#C0DD97;color:#173404">4</div>
-        <div>
-          <p class="srole">Trust proof</p>
-          <p class="shd">"Most mattress brands are marketing companies. We're a factory that happens to have a website."</p>
-          <p class="scopy">South Carolina. Owner-operated. 25+ years. 2,000,000 customers. When you live full-time on the road, you need a brand that will still be there in year 8.</p>
-          <p class="vn">The South Carolina factory exterior or a wide production floor shot. Authentic, not polished. The realness is the point.</p>
-        </div>
+        <div class="snum" style="background:#C0DD97;color:#173404">4</div>
+        <div><p class="srole">Trust proof</p><p class="shd">"Most mattress brands are marketing companies. We're a factory that happens to have a website."</p><p class="scopy">South Carolina. Owner-operated. 25+ years. 2,000,000 customers. When you live full-time on the road, you need a brand that will still be there in year 8.</p><p class="vn">The South Carolina factory exterior or a wide production floor shot. Authentic, unpollished. The realness is the entire point of this slide.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#9FE1CB;color:#04342C">5</div>
-        <div>
-          <p class="srole">CTA — identity close</p>
-          <p class="shd">"You chose the road. Choose the mattress that was built for it."</p>
-          <p class="scopy">Any size. Any shape. Custom built for your rig. 100-night trial. 10-year warranty. Free shipping.</p>
-          <p class="vn">A full-timer's morning — coffee, laptop, the view outside, a bed that looks genuinely comfortable. The whole life, in one frame.</p>
-        </div>
+        <div class="snum" style="background:#9FE1CB;color:#04342C">5</div>
+        <div><p class="srole">CTA — identity close</p><p class="shd">"You chose the road. Choose the mattress that was built for it."</p><p class="scopy">Any size. Any shape. Custom built for your rig. 100-night trial. 10-year warranty. Free shipping.</p><p class="vn">A full-timer's perfect morning — coffee, laptop open, the view outside, a bed that looks genuinely comfortable behind them. The whole life in one frame.</p></div>
       </div>
     </div>
     <div class="caps">
@@ -419,7 +788,7 @@ Tochta is built for exactly this. Real foam, engineered in layers, made to your 
 Because when the road is your home, sleep isn't optional. It's everything.
 
 Build yours → link in bio.</p>
-      <p class="htags">#SleepBetterWithTochta #FullTimeRV #RVLiving #VanLife #NomadLife #HomeOnWheels #LifeOnTheRoad #RVCommunity</p>
+      <p class="htags">#SleepBetterWithTochta #FullTimeRV #RVLiving #VanLife #NomadLife #HomeOnWheels #LifeOnTheRoad #RVCommunity #RVFullTime</p>
     </div>
   </div>
 
@@ -429,60 +798,35 @@ Build yours → link in bio.</p>
       <div>
         <p class="cnum">Carousel 03 of 03</p>
         <p class="cname">"Finally — a mattress that fits."</p>
-        <span class="pill" style="background:#EEEDFE;color:#3C3489;margin-top:6px;display:inline-block">Custom Home Sleeper + Trucker — the fit-problem buyer</span>
+        <span class="pill" style="background:#EEEDFE;color:#3C3489;margin-top:6px;display:inline-block">Custom Home Sleeper + Trucker &nbsp;·&nbsp; Emotional deliverable: The end of compromise</span>
       </div>
     </div>
-    <div class="cb">
+    <div class="cbody">
       <div class="ds">
-        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">Pure relief. After years of failed workarounds — wrong sizes, bad cuts, gap-ridden frames — someone finally built the answer. Quiet satisfaction, not excitement.</p></div>
-        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Cleaner, more functional. The custom builder UI is a hero visual. Before/after of an odd-shaped space — empty, then perfectly fitted. Satisfying like a puzzle piece clicking in.</p></div>
-        <div class="dcell"><p class="dlbl">Color &amp; type</p><p class="dtxt">Bright navy + white. Cleaner and more direct. This persona is practical. The CTA is immediate and action-forward.</p></div>
+        <div class="dcell"><p class="dlbl">Emotional core</p><p class="dtxt">Pure relief. After years of failed workarounds — wrong sizes, bad cuts, toppers that didn't hold, gap-ridden spaces — someone finally built the real answer. The dominant emotion is quiet, deep satisfaction. Not excitement. Relief.</p></div>
+        <div class="dcell"><p class="dlbl">Visual tone</p><p class="dtxt">Cleaner and more functional than the other two carousels. The custom builder UI is a hero visual. Before/after of an odd-shaped sleeping space — empty, then perfectly fitted. Satisfying like a puzzle piece clicking into exactly the right place.</p></div>
+        <div class="dcell"><p class="dlbl">Color &amp; type direction</p><p class="dtxt">Bright navy and clean white. More direct and less sentimental than the other two. This audience is practical. The CTA is immediate and action-forward. The aesthetic is clean precision over warm lifestyle.</p></div>
       </div>
       <p class="sl">Slide-by-slide copy</p>
       <div class="srow">
-        <div class="sn" style="background:#EEEDFE;color:#3C3489">1</div>
-        <div>
-          <p class="srole">Cover — the relief hook</p>
-          <p class="shd">"No, you don't have to cut it. No, a topper won't fix it. Yes, we can build it to your exact size."</p>
-          <p class="scopy">Three sentences. No product name yet. Just instant recognition — this brand has read their mind.</p>
-          <p class="vn">A striking odd-shaped sleeping space — angled RV corner, boat berth, custom loft — totally empty. The problem, visualized. Clean, editorial framing.</p>
-        </div>
+        <div class="snum" style="background:#EEEDFE;color:#3C3489">1</div>
+        <div><p class="srole">Cover — the relief hook</p><p class="shd">"No, you don't have to cut it. No, a topper won't fix it. Yes, we can build it to your exact size."</p><p class="scopy">Three sentences. No product name yet. Just instant recognition — this brand has read their mind. The scroll stops here because this person has heard the first two no's in their own head a hundred times.</p><p class="vn">A striking odd-shaped sleeping space — angled RV corner, boat berth, custom loft — completely empty. The problem, made visual. Clean, editorial framing.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#EEEDFE;color:#534AB7">2</div>
-        <div>
-          <p class="srole">Validate the journey</p>
-          <p class="shd">"You've tried everything. The topper that slipped. The mattress that was 4 inches too short. The one you cut yourself that never felt right."</p>
-          <p class="scopy">These aren't solutions. They're workarounds. There's a difference — and you've felt it every morning.</p>
-          <p class="vn">A chaotic composition of failed solutions — rolled topper, mattress with obvious gaps, stacked foam. Relatable, almost darkly funny.</p>
-        </div>
+        <div class="snum" style="background:#EEEDFE;color:#534AB7">2</div>
+        <div><p class="srole">Validate the journey of failure</p><p class="shd">"You've tried everything. The topper that slipped. The mattress that was 4 inches too short. The one you cut yourself that never felt right."</p><p class="scopy">These aren't solutions. They're workarounds. There's a real difference — and you've felt it every single morning.</p><p class="vn">A slightly chaotic composition of failed solutions — rolled topper, mattress with an obvious gap, stacked foam pieces. Relatable, almost darkly funny. The visual history of a problem unsolved.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#EEEDFE;color:#534AB7">3</div>
-        <div>
-          <p class="srole">The builder reveal</p>
-          <p class="shd">"Enter your exact dimensions. Choose your shape. Get your price — instantly."</p>
-          <p class="scopy">Angled corners. Radius edges. Notched cuts. Hinged for storage access. If you can measure it, we can build it.</p>
-          <p class="vn">Screen capture or clean graphic of the Tochta custom builder showing an unusual shape being configured. Make it look satisfying to use.</p>
-        </div>
+        <div class="snum" style="background:#EEEDFE;color:#534AB7">3</div>
+        <div><p class="srole">The builder reveal</p><p class="shd">"Enter your exact dimensions. Choose your shape. Get your price — instantly."</p><p class="scopy">Angled corners. Radius edges. Notched cuts. Hinged for storage access. If you can measure it, we can build it.</p><p class="vn">Screen capture or clean graphic of the Tochta custom builder showing an unusual shape being configured in real time. This is the product proof. Make it feel satisfying to look at.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#AFA9EC;color:#26215C">4</div>
-        <div>
-          <p class="srole">The after</p>
-          <p class="shd">"What it looks like when a mattress actually fits."</p>
-          <p class="scopy">No gap at the wall. No overhang at the frame. No "close enough." Just a bed built for exactly where you sleep.</p>
-          <p class="vn">The same unusual space from slide 1 — now with a perfectly fitted Tochta mattress inside it. The transformation. The puzzle piece. Deeply satisfying.</p>
-        </div>
+        <div class="snum" style="background:#AFA9EC;color:#26215C">4</div>
+        <div><p class="srole">The after — the payoff</p><p class="shd">"What it looks like when a mattress actually fits."</p><p class="scopy">No gap at the wall. No overhang at the frame. No "close enough." Just a bed built for exactly where you sleep.</p><p class="vn">The same unusual space from slide 1 — now with a perfectly fitted Tochta mattress sitting inside it. The transformation. The puzzle piece. A deeply satisfying composition that mirrors the emotional payoff.</p></div>
       </div>
       <div class="srow">
-        <div class="sn" style="background:#C0DD97;color:#173404">5</div>
-        <div>
-          <p class="srole">CTA</p>
-          <p class="shd">"Your space is custom. Your mattress should be too."</p>
-          <p class="scopy">Built in the USA. Any size, any shape, instant quote. Free shipping. 100-night trial. 10-year warranty.</p>
-          <p class="vn">The custom builder on mobile — someone inputting their dimensions. Fast, clean, empowering. The action is simple.</p>
-        </div>
+        <div class="snum" style="background:#C0DD97;color:#173404">5</div>
+        <div><p class="srole">CTA</p><p class="shd">"Your space is custom. Your mattress should be too."</p><p class="scopy">Built in the USA. Any size, any shape, instant quote. Free shipping. 100-night trial. 10-year warranty.</p><p class="vn">The custom builder on mobile — someone inputting their specific dimensions. Fast, clean, empowering. The action is simple. The result is exact.</p></div>
       </div>
     </div>
     <div class="caps">
@@ -498,61 +842,65 @@ Enter your dimensions. Get your price. Done — no phone calls, no waiting, no g
 Your space is custom. Your mattress should be too.
 
 Get your quote → link in bio.</p>
-      <p class="htags">#SleepBetterWithTochta #CustomMattress #RVMattress #TruckerLife #VanLife #MadeInUSA #RVLiving #CustomRV</p>
+      <p class="htags">#SleepBetterWithTochta #CustomMattress #RVMattress #TruckerLife #VanLife #MadeInUSA #RVLiving #CustomRV #RVUpgrade</p>
     </div>
   </div>
 
 </div></div>
 </section>
 
-<!-- SINGLE ADS -->
+<div class="pi"><div class="df"></div></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 06 — SINGLE ADS -->
+<!-- ============================================================ -->
 <section id="ads">
 <div class="pi"><div class="sw">
-  <p class="sey">Part 04 — Single Graphic Ads</p>
+  <p class="sey">Section 06</p>
   <h2 class="st">6 single-frame Instagram ads</h2>
-  <p class="sd">One image. One feeling. One moment of recognition. Full copy, visual direction, caption, and two A/B headline variants for each.</p>
+  <p class="sd">One image. One feeling. One moment of recognition. These are not informational ads — they are emotional interruptions. The job is to stop the scroll and plant a thought the person will carry with them. Full copy, visual direction, caption, and two A/B headline variants for each.</p>
   <div class="sr"></div>
 
   <!-- AD 01 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 01</p><p class="atitle">"The morning after"</p></div>
       <span class="pill" style="background:#E6F1FB;color:#0C447C">Weekend Wanderer — couples</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Catch them in the exact moment of pain — the morning after a bad night. Make them feel seen before selling anything. The recognition IS the hook.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">They've normalized waking up sore. Nobody has told them this is not inevitable. This ad does that — in one line.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Catch them in the exact felt moment of pain — the morning after a bad night in the rig. Make them feel seen before selling anything. The recognition is the hook. The product comes later.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">They've normalized waking up sore. Nobody has ever told them this is not inevitable — not their age, not their body, not "how camping is." This ad is the first thing that names the real culprit.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">Interior RV shot. Early morning light. One person sitting on the edge of the bed, back slightly hunched, hand on lower back. Not dramatic — just tired. The view outside the window is breathtaking: mountains, a lake, golden light. The contrast between inside and outside is the entire emotional argument. Large serif headline overlaid on the dark interior. Small logo + CTA bottom right. Nothing else.</p></div>
+      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">Interior RV shot. Early morning light. One person sitting on the edge of the bed, back slightly hunched, one hand on the lower back. Not dramatic, not theatrical — just the specific quiet exhaustion of a bad night's sleep. The view outside the window is breathtaking: mountains, a lake, golden hour. The contrast between the beauty outside and the exhaustion inside is the entire emotional argument. Large serif headline overlaid on the darker interior area. Small Tochta logo and CTA bottom right. Nothing else competing for attention.</p></div>
       <div class="cpb">
         <p class="cpr">Headline — large serif, overlaid on image</p>
         <p class="cph">"You drove all this way to wake up sore."</p>
-        <p class="cpr" style="margin-top:10px">Subline</p>
+        <p class="cpr" style="margin-top:10px">Subline — small, beneath headline</p>
         <p class="cps">It's not you. It's the mattress it came with.</p>
-        <p class="cpr" style="margin-top:10px">CTA</p>
+        <p class="cpr" style="margin-top:10px">CTA — bottom of frame</p>
         <p class="cpc">Tochta. Real mattresses, built for the road. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B headline variants to test</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — guilt reframe</p><p class="vch">"You didn't plan the perfect trip to feel like this."</p><p class="vcs">The mattress it came with wasn't part of the deal. Yours doesn't have to be.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — manufacturer callout</p><p class="vch">"They spent $80,000 building your RV. About $80 on your mattress."</p><p class="vcs">That's the math. We built Tochta to fix it.</p></div>
+        <div class="vc"><p class="vcl">Variant A — guilt reframe</p><p class="vch">"You didn't plan the perfect trip to feel like this."</p><p class="vcs">The mattress it came with wasn't part of the deal. Yours doesn't have to be.</p></div>
+        <div class="vc"><p class="vcl">Variant B — manufacturer callout</p><p class="vch">"They spent $80,000 building your RV. About $80 on your mattress."</p><p class="vcs">That's the math. We built Tochta to fix it.</p></div>
       </div>
     </div>
   </div>
 
   <!-- AD 02 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 02</p><p class="atitle">"The negotiation"</p></div>
       <span class="pill" style="background:#E6F1FB;color:#0C447C">Couples — Divini focus</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Name the silent couples conflict — one sleeps hot, one needs firmer. Relief that someone finally built a solution for exactly this.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">The Divini is the only RV mattress with dual-zone firmness. Couples who see this ad will feel it was made specifically for them.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Name the silent couples conflict that has been present on every single trip. One runs hot, one needs firmer. Neither says it's a dealbreaker but both feel it. Offer the relief of knowing that someone finally built the solution.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">The Divini is the only RV/custom mattress in the world with dual-zone independent firmness. This ad owns that story exclusively. Every couple who sees it will feel like it was made specifically for their situation.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">Clean split-frame. The bed divided perfectly down the center — left side warm/soft tones, right side cool/firm tones. Could be illustrated or photographic. One side warmer light; the other cooler, crisper. No people needed. The bed itself tells the story. Headline centered, spanning both halves — visually uniting the two while the copy speaks to the tension between them.</p></div>
+      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">Clean split-frame concept. The bed divided perfectly down the center — left side warm, soft, golden-toned; right side cool, crisper, firmer-feeling. Could be photographic or illustrated/designed. No people needed — the bed itself tells the story. Each side has a distinct visual language that communicates its feel without words. Headline centered, spanning both halves — visually uniting the two sides while the copy speaks to the tension that exists between them.</p></div>
       <div class="cpb">
         <p class="cpr">Headline</p>
         <p class="cph">"She runs hot. He needs firm. Nobody has to compromise anymore."</p>
@@ -561,26 +909,26 @@ Get your quote → link in bio.</p>
         <p class="cpr" style="margin-top:10px">CTA</p>
         <p class="cpc">Tochta Divini. Both of you win. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B variants</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — softer</p><p class="vch">"Two people. Two different sleepers. One mattress that gets it."</p><p class="vcs">The Divini. 9 firmness levels per side — because you're not the same sleeper.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — direct</p><p class="vch">"Stop sleeping on a mattress designed for one of you."</p><p class="vcs">The Tochta Divini has a different firmness for each side. Both of you, finally comfortable.</p></div>
+        <div class="vc"><p class="vcl">Variant A — softer, relational</p><p class="vch">"Two people. Two different sleepers. One mattress that gets it."</p><p class="vcs">The Divini. 9 firmness levels per side — because you're not the same sleeper.</p></div>
+        <div class="vc"><p class="vcl">Variant B — direct conflict</p><p class="vch">"Stop sleeping on a mattress that was designed for one of you."</p><p class="vcs">The Tochta Divini. A different firmness for each side. Both of you, finally comfortable.</p></div>
       </div>
     </div>
   </div>
 
   <!-- AD 03 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 03</p><p class="atitle">"The topper graveyard"</p></div>
-      <span class="pill" style="background:#FAEEDA;color:#633806">All personas — frustration stage</span>
+      <span class="pill" style="background:#FAEEDA;color:#633806">All personas — frustration &amp; failed solutions stage</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Validate the exhausting journey of failed solutions. Every RV owner who has bought multiple toppers will feel seen immediately. The humor is dark and real.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">Toppers are the most common attempted solution — and they universally fail because they treat the symptom, not the cause. This ad reframes the path forward.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Validate the exhausting, expensive journey of failed solutions. Every RV owner who has bought multiple toppers will feel immediately recognized. The humor is dark and real — not mean. It's the humor of shared experience.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">Toppers are the most common attempted solution to this problem — and they universally fail because they treat the symptom, not the cause. The factory foam underneath is the problem. This ad validates their history and reframes the path forward clearly.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction — two options</p><p class="vdt">Option A: Flat lay of failed toppers — memory foam, gel, bamboo — with handwritten-style labels: "attempt 1", "attempt 2", "attempt 3". Darkly funny, deeply relatable. Option B: A suspiciously thin RV mattress with toppers stacked on top, getting taller and more absurd. The visual metaphor is obvious. Mood: wry, knowing, empathetic comedy — "we've all been there."</p></div>
+      <div class="vd"><p class="vdl">Visual direction — two options</p><p class="vdt">Option A: Flat lay of a collection of failed toppers — memory foam, gel, bamboo — slightly worn, slightly defeated, with handwritten-style labels: "attempt 1", "attempt 2", "attempt 3". Darkly funny. Deeply relatable. Option B: A suspiciously thin factory RV mattress with toppers stacked on top of it in an increasingly absurd tower, each one a different type. The visual metaphor is obvious. Mood for both options: wry, knowing, empathetic comedy — the tone of "we've all been there and we both know it."</p></div>
       <div class="cpb">
         <p class="cpr">Headline</p>
         <p class="cph">"Topper #1. Topper #2. Topper #3. At some point, you have to replace the mattress."</p>
@@ -589,26 +937,26 @@ Get your quote → link in bio.</p>
         <p class="cpr" style="margin-top:10px">CTA</p>
         <p class="cpc">Tochta. The last mattress you'll ever buy for your RV. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B variants</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — math angle</p><p class="vch">"You've spent more on toppers than a Tochta mattress costs."</p><p class="vcs">Three toppers that didn't work, or one mattress that will. Do the math.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — empathy</p><p class="vch">"We know you've tried the toppers. Here's why none of them worked."</p><p class="vcs">The problem was never on top. It was underneath the whole time.</p></div>
+        <div class="vc"><p class="vcl">Variant A — math angle</p><p class="vch">"You've spent more on toppers than a Tochta mattress costs."</p><p class="vcs">Three toppers that didn't work, or one mattress that will. Do the math.</p></div>
+        <div class="vc"><p class="vcl">Variant B — empathy</p><p class="vch">"We know you've tried the toppers. Here's why none of them worked."</p><p class="vcs">The problem was never on top. It was underneath the whole time.</p></div>
       </div>
     </div>
   </div>
 
   <!-- AD 04 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 04</p><p class="atitle">"The stolen joy"</p></div>
-      <span class="pill" style="background:#EAF3DE;color:#27500A">Full-Time Lifer — emotional depth</span>
+      <span class="pill" style="background:#EAF3DE;color:#27500A">Full-Time Lifer — the deepest emotional argument</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">The deepest argument in the campaign. Bad sleep reduces positive emotional response. The view means less. The moment registers less. This ad makes that loss visible.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">Sleep science confirms it. This is the most resonant argument for full-timers who have invested their whole life in this experience — and feel it slipping away.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">The deepest emotional argument in the entire campaign. Bad sleep quality reduces the intensity of positive emotions — science confirms it. This ad makes visible what the customer is actually losing every day they sleep on a bad mattress. Not tiredness. Joy.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">The research is real and it's powerful: sleep deprivation specifically diminishes positive emotional experience while leaving negative emotions relatively intact. The view means less. The moment registers less. The experience the customer paid everything for is being stolen from them, morning by morning.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">A genuinely stunning landscape — Arches, Pacific Coast, Montana at dawn. The kind of view that should stop your heart. The subject in the foreground looks flat. Not sad, not dramatic — just not quite there. The body language of exhaustion in a place that deserves full presence. Cinematic. Quiet melancholy. The image must make you feel something before you read a word.</p></div>
+      <div class="vd"><p class="vdl">Visual direction</p><p class="vdt">A genuinely stunning landscape — Arches National Park, the Pacific Coast Highway, a Montana mountain pass at dawn. The kind of view that should stop your heart. The subject in the foreground looks flat. Not sad, not dramatic — just not quite there. The body language of mild exhaustion in a place that deserves absolute full presence. Slightly vacant eyes. Not theatrical. The image must make you feel something before you read a single word. Cinematic quality. This is the most artistically ambitious visual in the entire campaign.</p></div>
       <div class="cpb">
         <p class="cpr">Headline</p>
         <p class="cph">"Bad sleep doesn't just make you tired. It takes the feeling out of the places you came all this way to see."</p>
@@ -617,26 +965,26 @@ Get your quote → link in bio.</p>
         <p class="cpr" style="margin-top:10px">CTA</p>
         <p class="cpc">Tochta. Sleep better. Feel more. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B variants</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — short, poetic</p><p class="vch">"You drove 600 miles for this view. Don't be too tired to feel it."</p><p class="vcs">Tochta. Sleep better. Be here.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — present tense</p><p class="vch">"Right now, someone is standing in front of something beautiful — too exhausted to care."</p><p class="vcs">It doesn't have to be you. Tochta.</p></div>
+        <div class="vc"><p class="vcl">Variant A — short, poetic</p><p class="vch">"You drove 600 miles for this view. Don't be too tired to feel it."</p><p class="vcs">Tochta. Sleep better. Be here.</p></div>
+        <div class="vc"><p class="vcl">Variant B — present tense</p><p class="vch">"Right now, someone is standing in front of something beautiful — too exhausted to care."</p><p class="vcs">It doesn't have to be you. Tochta.</p></div>
       </div>
     </div>
   </div>
 
   <!-- AD 05 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 05</p><p class="atitle">"The factory truth"</p></div>
-      <span class="pill" style="background:#EAF3DE;color:#27500A">Full-Timer + Trucker — trust &amp; credibility</span>
+      <span class="pill" style="background:#EAF3DE;color:#27500A">Full-Timer + Trucker — trust &amp; real credibility</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Trust through authenticity. In a market full of "factory direct" brands that outsource everything, Tochta's actual factory earns deep credibility with skeptical, research-heavy buyers.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">This persona has been burned before. They don't respond to polish — they respond to proof. Real workers, real foam, real building. Show it, don't claim it.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Deep trust through radical authenticity. In a DTC mattress market full of clever websites that outsource everything, Tochta's actual owned factory is a genuine differentiator that earns profound credibility with skeptical, research-heavy buyers who have been burned by online brands before.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">This persona doesn't respond to polish — they respond to proof. Real workers. Real foam. Real building. Real South Carolina. The moment they see it, they know it's different. Show it, don't claim it. This is the only ad in the set where the authenticity of the photograph itself is the product.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction — cannot be stock photography</p><p class="vdt">Factory floor. Real. A worker in the foreground operating foam-cutting equipment or layering a mattress. Industrial but warm — someone's craft, not a warehouse line. Wide shot shows the scale of the facility. The authenticity of a real face, a real space, doing actual work is the entire message. Documentary aesthetic. Honest. The brand that has nothing to hide because they make everything themselves.</p></div>
+      <div class="vd"><p class="vdl">Visual direction — this cannot be stock photography under any circumstances</p><p class="vdt">Factory floor. Real. A worker in the foreground operating foam-cutting equipment, or carefully layering foam panels for a custom order. Industrial but warm — someone's craft, not a warehouse assembly line. Wide enough to show the scale of the facility. The authenticity of a real face, real hands, a real space doing actual work is the entire message of this ad. Documentary aesthetic. Honest. The brand that has nothing to hide because they make everything themselves. If the photo feels like it could be from a stock library, it will not work. It must be real.</p></div>
       <div class="cpb">
         <p class="cpr">Headline</p>
         <p class="cph">"Most mattress brands are websites. We're a factory."</p>
@@ -645,26 +993,26 @@ Get your quote → link in bio.</p>
         <p class="cpr" style="margin-top:10px">CTA</p>
         <p class="cpc">Tochta. Factory direct, for real. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B variants</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — worker focused</p><p class="vch">"The person who built your mattress has worked in this factory for 11 years."</p><p class="vcs">Tochta. South Carolina. Owner-operated for 25 years.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — blunt contrast</p><p class="vch">"They have a Shopify store. We have a factory."</p><p class="vcs">Tochta. Built, not branded.</p></div>
+        <div class="vc"><p class="vcl">Variant A — worker focused</p><p class="vch">"The person who built your mattress has worked in this factory for 11 years."</p><p class="vcs">Tochta. South Carolina. Owner-operated for 25 years.</p></div>
+        <div class="vc"><p class="vcl">Variant B — blunt contrast</p><p class="vch">"They have a Shopify store. We have a factory."</p><p class="vcs">Tochta. Built, not branded.</p></div>
       </div>
     </div>
   </div>
 
   <!-- AD 06 -->
-  <div class="ac2">
-    <div class="ah">
+  <div class="acard">
+    <div class="ahead">
       <div><p class="anl">Ad 06</p><p class="atitle">"Finally, it fits."</p></div>
-      <span class="pill" style="background:#EEEDFE;color:#3C3489">Custom Home Sleeper + Trucker</span>
+      <span class="pill" style="background:#EEEDFE;color:#3C3489">Custom Home Sleeper + Trucker — the fit problem</span>
     </div>
-    <div class="ab">
+    <div class="abody">
       <div class="aig">
-        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Pure relief. After years of workarounds, someone finally built the answer. Quiet satisfaction — the feeling of a problem solved at last.</p></div>
-        <div class="aic"><p class="ail">The insight</p><p class="ait">For this persona, the custom builder IS the product. The moment they see their problem solved in a single image, conversion intent spikes. Discovery is the whole journey.</p></div>
+        <div class="aic"><p class="ail">Emotional job</p><p class="ait">Pure, quiet relief. After years of workarounds — wrong sizes, gaps, overhangs, cut foam that created uneven surfaces — someone finally built the answer. Not exciting. Deeply satisfying. The feeling of a problem that has been following you for years finally being solved.</p></div>
+        <div class="aic"><p class="ail">The insight</p><p class="ait">For this persona, the custom builder is the entire product. The moment they see their specific problem — their unusual dimensions, their awkward corner geometry — being solved in a single image, conversion intent spikes immediately. Discovery is the entire journey for this buyer.</p></div>
       </div>
-      <div class="vd"><p class="vdl">Visual direction — two options</p><p class="vdt">Option A: Overhead flat-lay of an unusually shaped sleeping space with a Tochta mattress sitting inside it, perfectly fitted. Clean, satisfying, almost architectural. Option B: Side-by-side. Left: a standard mattress crammed into an odd RV space — visible gaps, overhang, wrong fit. Right: a Tochta mattress in the same space, perfectly fitted. The comparison is immediate and visceral. Mood: clean, precise, satisfying — the aesthetic of a problem solved.</p></div>
+      <div class="vd"><p class="vdl">Visual direction — two strong options</p><p class="vdt">Option A: Overhead flat-lay of an unusually shaped sleeping space — angled corners, a notched wall, a non-standard width — with a Tochta mattress sitting inside it perfectly. Clean, satisfying, almost architectural in its composition. Option B: Side by side. Left: a standard mattress crammed into an odd sleeping space — visible gaps at the walls, obvious overhang, wrong fit captured in a single image. Right: a Tochta mattress in the identical space, perfectly fitted. Edge to edge. The comparison is immediate and visceral. Mood for both: clean, precise, the aesthetic of a problem solved. Less lifestyle, more craft and engineering satisfaction.</p></div>
       <div class="cpb">
         <p class="cpr">Headline</p>
         <p class="cph">"Your space is one of a kind. So is your mattress."</p>
@@ -673,10 +1021,10 @@ Get your quote → link in bio.</p>
         <p class="cpr" style="margin-top:10px">CTA</p>
         <p class="cpc">Tochta. If you can measure it, we can build it. → tochta.com</p>
       </div>
-      <p class="vrl">A/B headline variants</p>
+      <p class="vrl">A/B variants</p>
       <div class="vrow">
-        <div class="vcard"><p class="vcl">Variant A — relief</p><p class="vch">"You've been sleeping on a mattress that doesn't fit because you thought that was the only option."</p><p class="vcs">It's not. Tochta. Any size, any shape, built to your exact dimensions.</p></div>
-        <div class="vcard"><p class="vcl">Variant B — builder focus</p><p class="vch">"Enter your dimensions. Get your price. We'll build it."</p><p class="vcs">Angled corners, radius edges, hinged configurations. Instant quote, no calls needed.</p></div>
+        <div class="vc"><p class="vcl">Variant A — relief</p><p class="vch">"You've been sleeping on a mattress that doesn't fit because you thought that was the only option."</p><p class="vcs">It's not. Tochta. Any size, any shape, built to your exact dimensions.</p></div>
+        <div class="vc"><p class="vcl">Variant B — builder focus</p><p class="vch">"Enter your dimensions. Get your price. We'll build it."</p><p class="vcs">Angled corners, radius edges, hinged configurations. Instant quote. No calls needed.</p></div>
       </div>
     </div>
   </div>
@@ -686,8 +1034,8 @@ Get your quote → link in bio.</p>
 
 <footer>
   <div class="fi">
-    <span class="fb">Tochta <span>&middot;</span> Campaign Brief</span>
-    <span class="fm">Prepared by Nomolos Creative &middot; April 2026 &middot; Confidential</span>
+    <span class="fb">Tochta <span>&middot;</span> Strategy &amp; Campaign Brief</span>
+    <span class="fm">Prepared by Nomolos Creative &nbsp;&middot;&nbsp; April 2026 &nbsp;&middot;&nbsp; Confidential</span>
   </div>
 </footer>
 
